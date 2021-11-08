@@ -31,6 +31,6 @@ export const get = async (): Promise<EndpointOutput> => {
 
 	return {
 		status: 200,
-		body: homePage
+		body: { homePage }
 	};
 };

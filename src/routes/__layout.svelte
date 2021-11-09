@@ -1,13 +1,14 @@
 <script>
-	import '../app.scss';
+	import '../app.css';
 	import Header from '$lib/header.svelte';
 	import Footer from '$lib/footer.svelte';
 </script>
 
-<Header />
+<Header>
+	<main class="b3-page-content">
+		<slot />
+	</main>
 
-<main class="b3-page-content">
-	<slot />
-</main>
-
-<Footer />
+	<Footer /></Header
+>
+<slot />

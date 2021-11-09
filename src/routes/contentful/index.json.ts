@@ -18,6 +18,7 @@ export const get = async (): Promise<EndpointOutput> => {
 		query GetHomePage {
 			homePage(id: "3FOzAwqY6CSeWlfm1Ef7WT") {
 				topBannerTitle
+				topBannerSubtitle
 				topBannerImage {
 					url
 					title

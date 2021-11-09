@@ -26,8 +26,7 @@
 		<div>
 			<h1 class="text-4xl font-bold mb-4">{homePage.topBannerTitle}</h1>
 			<p class="font-light text-lg">
-				Vi ser etter deg som har lyst å bidra til at dette blir årets happening i 2022. Bli med da
-				vel! Vi trenger alle frivillige vi kan få.
+				{homePage.topBannerSubtitle}
 			</p>
 			<div class="card-actions">
 				<button class="btn btn-primary">Jeg vil være med!</button>

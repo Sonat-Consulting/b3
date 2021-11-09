@@ -5,10 +5,10 @@
 </script>
 
 <Header>
-	<main class="b3-page-content">
+	<main>
 		<slot />
 	</main>
 
-	<Footer /></Header
->
+	<Footer />
+</Header>
 <slot />

@@ -29,7 +29,7 @@
 				{homePage.topBannerSubtitle}
 			</p>
 			<div class="card-actions">
-				<button class="btn btn-primary">Jeg vil være med!</button>
+				<a class="btn btn-primary" href="/volunteers">Jeg vil være med!</a>
 				<button class="btn btn-ghost">Mer info</button>
 			</div>
 		</div>

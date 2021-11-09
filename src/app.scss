@@ -1,6 +1,29 @@
 @import "normalize.css";
 
-.container {
-  display: grid;
-  grid-template-rows: 50px 1fr;
+.b3 {
+  &-page {
+    display: grid;
+    grid-template-rows: 80px 1fr 80px;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+
+    &-header {
+    }
+
+    &-content {
+      background: #ddd
+    }
+
+    &-footer {
+    }
+  }
+
+  &-top-banner {
+    background: #fdf2f8;
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    &-image {
+      width: 100%;
+    }
+  }
 }

@@ -19,7 +19,11 @@
 	<title>B3</title>
 </svelte:head>
 
-<div class="banner">
+<div class="b3-top-banner">
 	<h1>{homePage.topBannerTitle}</h1>
-	<img alt={homePage.topBannerImage.description} src={homePage.topBannerImage.url} />
+	<img
+		class="b3-top-banner-image"
+		alt={homePage.topBannerImage.description}
+		src={homePage.topBannerImage.url}
+	/>
 </div>

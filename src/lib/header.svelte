@@ -1,4 +1,4 @@
-<header>
+<header class="b3-page-header">
 	<nav>
 		<ul>
 			<li>

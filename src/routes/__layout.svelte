@@ -1,8 +1,9 @@
 <script>
+	import '../app.scss';
 	import Header from '$lib/header.svelte';
 </script>
 
-<Header />
-<main>
+<main class="container">
+	<Header />
 	<slot />
 </main>

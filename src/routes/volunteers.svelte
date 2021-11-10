@@ -32,9 +32,4 @@
 			<button type="submit" class="btn btn-primary">Send inn</button>
 		</div>
 	</form>
-	<img
-		class="rounded-lg shadow-sm"
-		alt="Bilder av frivillige til B3"
-		src="https://images.ctfassets.net/wi3d49ltoppx/2UM5tta9rejSkQ4gKx328f/a10997854daccf6c5e00a59491e351e8/a1751f32-9923-4454-b8d6-5acb6f9b098f"
-	/>
 </Card>

@@ -1,8 +1,12 @@
+<script context="module">
+	import Input from '$lib/form/input.svelte';
+</script>
+
 <svelte:head>
 	<title>B3 | Frivillige</title>
 </svelte:head>
 
-<section class="bg-red-50 dark:bg-gray-900">
+<section class="bg-red-50">
 	<div
 		class="container max-w-screen-lg mx-auto px-6 py-12 grid md:grid-cols-2 gap-4 lg:gap-16 items-center"
 	>
@@ -10,68 +14,20 @@
 			<input type="hidden" name="form-name" value="volunteers" />
 			<div class="flex flex-wrap -mx-3 mb-6">
 				<div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-					<label
-						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-						for="grid-first-name"
-					>
-						First Name
-					</label>
-					<input
-						class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-						id="grid-first-name"
-						type="text"
-						placeholder="Jane"
-						name="firstname"
-					/>
+					<Input name="firstname" label="Fornavn" placeholder="Ola" type="text" />
 				</div>
 				<div class="w-full md:w-1/2 px-3">
-					<label
-						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-						for="grid-last-name"
-					>
-						Last Name
-					</label>
-					<input
-						class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-						id="grid-last-name"
-						type="text"
-						placeholder="Doe"
-						name="lastname"
-					/>
+					<Input name="lastname" label="Etternavn" placeholder="Nordmann" type="text" />
 				</div>
 			</div>
-			<div class="flex flex-wrap -mx-3 mb-6">
-				<div class="w-full px-3">
-					<label
-						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-						for="grid-email"
-					>
-						Email
-					</label>
-					<input
-						class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-						id="grid-email"
-						type="email"
-						placeholder="Din epost"
-						name="email"
-					/>
+			<div class="w-full px-3">
+				<div class="flex flex-wrap -mx-3 mb-6">
+					<Input name="email" label="Email (ny)" placeholder="Din epost" type="email" />
 				</div>
 			</div>
-			<div class="flex flex-wrap -mx-3 mb-6">
-				<div class="w-full px-3">
-					<label
-						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-						for="grid-phone"
-					>
-						Telefon
-					</label>
-					<input
-						class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-						id="grid-phone"
-						type="tel"
-						placeholder="Ditt telefonnummer"
-						name="phone"
-					/>
+			<div class="w-full px-3">
+				<div class="flex flex-wrap -mx-3 mb-6">
+					<Input name="phone" label="Telefon (ny)" placeholder="Ditt telefonnummer" type="tel" />
 				</div>
 			</div>
 			<div class="card-actions">

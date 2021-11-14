@@ -1,12 +1,11 @@
 <script context="module" lang="ts">
-	export async function load({ fetch }) {
-		const res = await fetch('/contentful.json');
+	import type { IHomePageContent } from '../interfaces/IHomePage';
 
+	export async function load({ fetch }): Promise<any> {
+		const res = await fetch('/contentful.json');
 		if (res.ok) {
-			const { homePage } = await res.json();
-			return {
-				props: { homePage }
-			};
+			const content: IHomePageContent = await res.json();
+			return { props: { content } };
 		}
 	}
 </script>
@@ -14,7 +13,7 @@
 <script lang="ts">
 	import Card from '$lib/card.svelte';
 	import ArticleLink from '$lib/article/link.svelte';
-	export let homePage;
+	export let content: IHomePageContent;
 </script>
 
 <svelte:head>
@@ -23,9 +22,9 @@
 
 <Card>
 	<div>
-		<h1 class="text-4xl font-bold mb-4">{homePage.topBannerTitle}</h1>
+		<h1 class="text-4xl font-bold mb-4">{content.topBannerTitle}</h1>
 		<p class="font-light text-lg">
-			{homePage.topBannerSubtitle}
+			{content.topBannerSubtitle}
 		</p>
 		<div class="card-actions">
 			<a class="btn btn-primary" href="/volunteers">Jeg vil være med!</a>
@@ -34,8 +33,8 @@
 	</div>
 	<img
 		class="rounded-lg shadow-sm"
-		alt={homePage.topBannerImage.description}
-		src={homePage.topBannerImage.url}
+		alt={content.topBannerImage.description}
+		src={content.topBannerImage.url}
 	/>
 </Card>
 

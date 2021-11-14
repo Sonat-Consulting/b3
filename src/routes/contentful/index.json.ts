@@ -1,5 +1,6 @@
 import type { EndpointOutput } from '@sveltejs/kit/types/endpoint';
 import { gql, GraphQLClient } from 'graphql-request';
+import type { IHomePage, IHomePageContent } from '../../interfaces/IHomePage';
 
 const accessToken = import.meta.env.VITE_CONTENTFUL_DELIVERY_API_ACCESS_TOKEN;
 const spaceId = import.meta.env.VITE_CONTENTFUL_SPACE_ID;
@@ -13,10 +14,10 @@ const graphQLClient = new GraphQLClient(
 	}
 );
 
-export const get = async (): Promise<EndpointOutput> => {
+export const get = async (): Promise<EndpointOutput<IHomePageContent>> => {
 	const query = gql`
 		query GetHomePage {
-			homePage(id: "3FOzAwqY6CSeWlfm1Ef7WT") {
+			content: homePage(id: "3FOzAwqY6CSeWlfm1Ef7WT") {
 				topBannerTitle
 				topBannerSubtitle
 				topBannerImage {
@@ -28,10 +29,10 @@ export const get = async (): Promise<EndpointOutput> => {
 		}
 	`;
 
-	const { homePage } = await graphQLClient.request(query);
+	const homePage = await graphQLClient.request<IHomePage>(query);
 
 	return {
 		status: 200,
-		body: { homePage }
+		body: homePage.content
 	};
 };

@@ -44,27 +44,37 @@
 
 			<div class="mt-4 space-y-4">
 				<label class="flex items-center">
-					<input name="jobs" value="Løypevakt for svømming" type="checkbox" class="checkbox mr-3" />
+					<input
+						name="jobs[]"
+						value="Løypevakt for svømming"
+						type="checkbox"
+						class="checkbox mr-3"
+					/>
 					Løypevakt for svømming
 				</label>
 
 				<label class="flex items-center">
-					<input name="jobs" value="Løypevakt for sykling" type="checkbox" class="checkbox mr-3" />
+					<input
+						name="jobs[]"
+						value="Løypevakt for sykling"
+						type="checkbox"
+						class="checkbox mr-3"
+					/>
 					Løypevakt for sykling
 				</label>
 
 				<label class="flex items-center">
-					<input name="jobs" value="Løypevakt for løping" type="checkbox" class="checkbox mr-3" />
+					<input name="jobs[]" value="Løypevakt for løping" type="checkbox" class="checkbox mr-3" />
 					Løypevakt for løping
 				</label>
 
 				<label class="flex items-center">
-					<input name="jobs" value="Drikkestasjon" type="checkbox" class="checkbox mr-3" />
+					<input name="jobs[]" value="Drikkestasjon" type="checkbox" class="checkbox mr-3" />
 					Drikkestasjon
 				</label>
 
 				<label class="flex items-center">
-					<input name="jobs" value="Sjåfør" type="checkbox" class="checkbox mr-3" />
+					<input name="jobs[]" value="Sjåfør" type="checkbox" class="checkbox mr-3" />
 					Sjåfør
 				</label>
 			</div>

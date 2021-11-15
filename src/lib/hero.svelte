@@ -1,6 +1,6 @@
 <div class="hero">
 	<video autoplay muted loop>
-		<source src="/static/man_riding_a_bicycle_along_a_river.mp4" type="video/mp4" />
+		<source src="/man_riding_a_bicycle_along_a_river.mp4" type="video/mp4" />
 	</video>
 </div>
 

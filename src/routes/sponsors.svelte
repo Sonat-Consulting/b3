@@ -7,14 +7,12 @@
 </svelte:head>
 
 <Card>
-	<form class="w-full max-w-lg" name="volunteers" method="POST" data-netlify="true">
-		<div>
-			<h1 class="text-4xl font-bold mb-4">Bli en samarbeidspartner</h1>
-			<p class="font-light text-lg">
-				Vi ønsker flere samarbeidspartnere. Ta kontakt med oss dersom det er interessant.
-			</p>
-		</div>
-	</form>
+	<div>
+		<h1 class="text-4xl font-bold mb-4">Bli en samarbeidspartner</h1>
+		<p class="font-light text-lg">
+			Vi ønsker flere samarbeidspartnere. Ta kontakt med oss dersom det er interessant.
+		</p>
+	</div>
 	<img
 		class="rounded-lg shadow-sm"
 		alt="Bilder av frivillige til B3"

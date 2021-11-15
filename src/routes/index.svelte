@@ -11,6 +11,7 @@
 </script>
 
 <script lang="ts">
+	import Hero from '$lib/hero.svelte';
 	import Card from '$lib/card.svelte';
 	import ArticleLink from '$lib/article/link.svelte';
 	export let content: IHomePageContent;
@@ -19,6 +20,8 @@
 <svelte:head>
 	<title>B3</title>
 </svelte:head>
+
+<Hero />
 
 <Card>
 	<div>

@@ -17,9 +17,7 @@ export const get = async (): Promise<EndpointOutput<HomePage>> => {
 			}
 			articleCollection(order: date_DESC, limit: 10) {
 				items {
-					sys {
-						id
-					}
+					slug
 					title
 					ingress
 					articleHeroImage {

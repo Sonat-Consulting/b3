@@ -1,7 +1,5 @@
 export type ArticleCollectionItem = {
-	sys: {
-		id: string;
-	};
+	slug: string;
 	title: string;
 	ingress: string;
 	articleHeroImage: {

@@ -48,7 +48,7 @@
 	{#each homePage.articleCollection.items as article}
 		<ArticleLink
 			imageAltText={article.articleHeroImage.title}
-			url="/"
+			url={`/news/${article.sys.id}`}
 			date={format(parseISO(article.date), 'MMM d, yy', { locale: nb })}
 			imageSrc={article.articleHeroImage.url}
 			title={article.title}

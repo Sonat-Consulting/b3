@@ -33,18 +33,18 @@
 			{homePage.content.topBannerSubtitle}
 		</p>
 		<div class="card-actions">
-			<a class="btn btn-primary" href="/volunteers">Jeg vil være med!</a>
-			<button class="btn btn-ghost">Mer info</button>
+			<a class="btn btn-primary mb-8 mr-8" href="/volunteers">Meld deg som frivillig</a>
+			<button class="btn btn-ghost">Mer informasjon</button>
 		</div>
 	</div>
 	<img
-		class="rounded-lg shadow-sm"
+		class="rounded-lg shadow-sm col-span-2"
 		alt={homePage.content.topBannerImage.description}
 		src={homePage.content.topBannerImage.url}
 	/>
 </Card>
 
-<div class="container p-6 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
+<div class="p-6 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
 	{#each homePage.articleCollection.items as article}
 		<ArticleLink
 			imageAltText={article.articleHeroImage.title}

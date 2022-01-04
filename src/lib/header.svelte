@@ -1,8 +1,11 @@
 <header>
 	<nav class="navbar bg-none text-none-content">
 		<div class="flex-1 px-2 mx-2">
-			<a class="text-lg font-bold" href="/">B3</a>
+			<a class="text-lg font-bold" href="/">
+				<img alt="World triathlon cup Bergen 2022" src="/2022.svg" />
+			</a>
 		</div>
+
 		<div class="flex-none hidden px-2 mx-2 lg:flex">
 			<div class="flex items-stretch">
 				<a class="btn btn-ghost btn-sm rounded-btn" href="/volunteers">Frivillige</a>

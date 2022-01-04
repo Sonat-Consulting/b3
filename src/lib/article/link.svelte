@@ -7,7 +7,7 @@
 	export let ingress: string;
 </script>
 
-<a class="p-2" href={url}>
+<a href={url}>
 	<div class="relative">
 		<img src={imageSrc} alt={imageAltText} class="rounded-lg shadow-sm w-full h-52 object-cover" />
 		<div

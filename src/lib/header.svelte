@@ -1,5 +1,5 @@
 <header>
-	<nav class="navbar bg-none text-none-content">
+	<nav class="flex items-center justify-between bg-none text-none-content px-8 py-4">
 		<div class="flex-1 px-2 mx-2">
 			<a class="text-lg font-bold" href="/">
 				<img alt="World triathlon cup Bergen 2022" src="/2022.svg" />
@@ -8,10 +8,11 @@
 
 		<div class="flex-none hidden px-2 mx-2 lg:flex">
 			<div class="flex items-stretch">
-				<a class="btn btn-ghost btn-sm rounded-btn" href="/volunteers">Frivillige</a>
-				<a class="btn btn-ghost btn-sm rounded-btn" href="/sponsors">Samarbeidspartnere</a>
+				<a class="btn-primary mr-2" href="/volunteers">Meld deg som frivillig</a>
+				<a class="btn-tertiary" href="/sponsors">Partnere</a>
 			</div>
 		</div>
+
 		<div class="flex-none">
 			<button class="btn btn-square btn-ghost">
 				<svg

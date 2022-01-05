@@ -29,12 +29,12 @@
 <Card>
 	<div>
 		<h1 class="text-4xl font-bold mb-4">{homePage.content.topBannerTitle}</h1>
-		<p class="font-light text-lg">
+		<p class="font-light text-lg mb-8">
 			{homePage.content.topBannerSubtitle}
 		</p>
 		<div class="card-actions">
-			<a class="btn btn-primary mb-8 mr-8" href="/volunteers">Meld deg som frivillig</a>
-			<button class="btn btn-ghost">Mer informasjon</button>
+			<a class="btn-primary mb-8 mr-8" href="/volunteers">Meld deg som frivillig</a>
+			<button class="btn-secondary mb-8 mr-8">Mer informasjon</button>
 		</div>
 	</div>
 	<img
@@ -44,7 +44,7 @@
 	/>
 </Card>
 
-<div class="p-6 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+<div class="p-6 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
 	{#each homePage.articleCollection.items as article}
 		<ArticleLink
 			imageAltText={article.articleHeroImage.title}

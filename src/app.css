@@ -4,13 +4,16 @@
 @tailwind utilities;
 
 @layer components {
+    .btn {
+        @apply border-2 hover:border-sky-400 hover:bg-sky-300;
+    }
     .btn-primary {
-        @apply bg-sky-300 font-medium inline-block rounded-xl text-center px-8 py-2.5;
+        @apply btn bg-sky-300 border-sky-300 font-medium inline-block rounded-xl text-center px-8 py-2.5;
     }
     .btn-secondary {
-        @apply font-medium border-2 border-sky-300 inline-block rounded-xl text-center px-8 py-2.5;
+        @apply btn font-medium border-2 border-sky-300 inline-block rounded-xl text-center px-8 py-2.5;
     }
     .btn-tertiary {
-        @apply font-medium inline-block rounded-xl text-center px-8 py-2.5 hover:bg-sky-300;
+        @apply btn font-medium border-transparent inline-block rounded-xl text-center px-8 py-2.5;
     }
 }

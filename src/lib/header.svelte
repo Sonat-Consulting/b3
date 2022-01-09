@@ -1,19 +1,22 @@
-<header>
-	<nav class="flex items-center justify-between bg-none text-none-content px-8 py-4">
-		<div class="flex-1 px-2 mx-2">
-			<a class="text-lg font-bold" href="/">
-				<img alt="World triathlon cup Bergen 2022" src="/2022.svg" />
-			</a>
+<header class="px-6 py-4">
+	<nav class="flex items-center justify-between bg-none text-none-content">
+		<div class="flex-1 flex items-center">
+			<div class="whitespace-pre uppercase">World<br />Triathlon<br />Cup Bergen</div>
+			<div class="px-2 mx-2 w-24 md:w-auto">
+				<a class="text-lg font-bold" href="/">
+					<img alt="World triathlon cup Bergen 2022" src="/2022.svg" />
+				</a>
+			</div>
 		</div>
 
-		<div class="flex-none hidden px-2 mx-2 lg:flex">
+		<div class="flex-none hidden lg:flex">
 			<div class="flex items-stretch">
 				<a class="btn-primary mr-2" href="/volunteers">Meld deg som frivillig</a>
 				<a class="btn-tertiary" href="/sponsors">Partnere</a>
 			</div>
 		</div>
 
-		<div class="flex-none">
+		<div class="flex-none md:hidden">
 			<button class="">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"

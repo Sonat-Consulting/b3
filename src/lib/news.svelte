@@ -2,7 +2,7 @@
 	import type { Article } from '$lib/contentful/types/Article';
 	import ArticleLink from '$lib/article/link.svelte';
 	import { format, parseISO } from 'date-fns/index.js';
-	import { nb } from 'date-fns/locale/index';
+	import { nb } from 'date-fns/locale/index.js';
 	export let articles: Article[];
 </script>
 

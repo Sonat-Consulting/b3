@@ -8,7 +8,7 @@
         @apply bg-sky-300 font-medium inline-block rounded-xl text-center px-8 py-2.5;
     }
     .btn-secondary {
-        @apply font-medium border-2 border-sky-300 inline-block rounded-xl text-center px-8 py-2.5 hover:bg-sky-300 hover:border-transparent;
+        @apply font-medium border-2 border-sky-300 inline-block rounded-xl text-center px-8 py-2.5;
     }
     .btn-tertiary {
         @apply font-medium inline-block rounded-xl text-center px-8 py-2.5 hover:bg-sky-300;

@@ -44,6 +44,13 @@
 	/>
 </Card>
 
+<div class="relative h-12 text-center">
+	<div class="absolute mt-6 border-t-2 border-sky-300 w-full" />
+	<div class="btn-secondary mx-auto relative z-10 h-full bg-white">
+		Siste nyheter fra Bergen Triathlon Events
+	</div>
+</div>
+
 <div class="p-6 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
 	{#each homePage.articleCollection.items as article}
 		<ArticleLink

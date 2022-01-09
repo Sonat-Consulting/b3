@@ -1,17 +1,22 @@
 <script context="module" lang="ts">
 	export async function load({ page, fetch }): Promise<any> {
-		const res = await fetch(`/contentful/articles/${page.params.slug}.json`);
+		const [articleRes, articlesRes] = await Promise.all([
+			fetch(`/contentful/articles/${page.params.slug}.json`),
+			fetch(`/contentful/articles.json`)
+		]);
 
-		if (res.ok) {
-			const article = await res.json();
-			return { props: { article } };
+		if (articlesRes.ok) {
+			const [article, articles] = await Promise.all([articleRes.json(), articlesRes.json()]);
+			return { props: { article, articles } };
 		}
 	}
 </script>
 
 <script lang="ts">
 	import Card from '$lib/card.svelte';
+	import News from '$lib/news.svelte';
 	export let article;
+	export let articles;
 </script>
 
 <svelte:head>
@@ -31,3 +36,5 @@
 		src={article.articleHeroImage.url}
 	/>
 </Card>
+
+<News {articles} />

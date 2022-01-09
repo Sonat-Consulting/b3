@@ -1,4 +1,4 @@
-export type ArticleCollectionItem = {
+export type Article = {
 	slug: string;
 	title: string;
 	ingress: string;

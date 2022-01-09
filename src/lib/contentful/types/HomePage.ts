@@ -1,5 +1,3 @@
-import type { ArticleCollectionItem } from './ArticleCollection';
-
 export type HomePageContent = {
 	topBannerTitle: string;
 	topBannerSubtitle: string;
@@ -12,5 +10,4 @@ export type HomePageContent = {
 
 export type HomePage = {
 	content: HomePageContent;
-	articleCollection: { items: ArticleCollectionItem[] };
 };

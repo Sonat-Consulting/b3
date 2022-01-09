@@ -15,18 +15,6 @@ export const get = async (): Promise<EndpointOutput<HomePage>> => {
 					description
 				}
 			}
-			articleCollection(order: date_DESC, limit: 10) {
-				items {
-					slug
-					title
-					ingress
-					articleHeroImage {
-						title
-						url
-					}
-					date
-				}
-			}
 		}
 	`;
 

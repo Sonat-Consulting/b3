@@ -9,6 +9,9 @@ export const get = async ({ params }): Promise<EndpointOutput<any>> => {
 				items {
 					title
 					ingress
+					body {
+						json
+					}
 					date
 					articleHeroImage {
 					  url

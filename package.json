@@ -37,6 +37,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@contentful/rich-text-html-renderer": "^15.11.1",
+		"@contentful/rich-text-types": "^15.11.1",
 		"date-fns": "^2.27.0"
 	}
 }

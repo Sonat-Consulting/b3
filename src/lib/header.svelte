@@ -5,35 +5,16 @@
 				<div class="whitespace-pre uppercase text-right">
 					World<br />Triathlon<br />Cup Bergen
 				</div>
-				<div class="px-2 ml-4 w-24 md:w-auto">
+				<div class="px-2 ml-4 w-24 md:w-auto hidden md:block">
 					<img alt="World triathlon cup Bergen 2022" src="/2022.svg" />
 				</div>
 			</a>
 		</div>
 
-		<div class="flex-none hidden lg:flex">
+		<div class="flex-none">
 			<div class="flex items-stretch">
-				<a class="btn-primary mr-2" href="/volunteers">Meld deg som frivillig</a>
-				<a class="btn-tertiary" href="/sponsors">Partnere</a>
+				<a class="btn-primary" href="/volunteers">Meld deg som frivillig</a>
 			</div>
-		</div>
-
-		<div class="flex-none md:hidden">
-			<button class="">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					class="inline-block w-6 h-6 stroke-current"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M4 6h16M4 12h16M4 18h16"
-					/>
-				</svg>
-			</button>
 		</div>
 	</nav>
 </header>

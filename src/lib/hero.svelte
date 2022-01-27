@@ -1,4 +1,4 @@
-<div class="w-full aspect-video relative overflow-hidden h-96 xl:h-128 2xl:h-192">
+<div class="w-full aspect-video relative overflow-hidden h-96 xl:h-112">
 	<video
 		playsinline
 		autoplay

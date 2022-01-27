@@ -30,22 +30,24 @@
 
 <Hero />
 
-<Card>
-	<div>
-		<h1 class="text-4xl font-bold mb-4">{homePage.content.topBannerTitle}</h1>
-		<p class="font-light text-lg mb-8">
-			{homePage.content.topBannerSubtitle}
-		</p>
-		<div class="card-actions">
-			<a class="btn-primary mb-8 mr-8" href="/volunteers">Meld deg som frivillig</a>
-			<button class="btn-secondary mb-8 mr-8">Mer informasjon</button>
+<div class="container flex flex-col mx-auto">
+	<Card>
+		<div>
+			<h1 class="text-4xl font-bold mb-4">{homePage.content.topBannerTitle}</h1>
+			<p class="font-light text-lg mb-8">
+				{homePage.content.topBannerSubtitle}
+			</p>
+			<div class="card-actions">
+				<a class="btn-primary mb-8 mr-8" href="/volunteers">Meld deg som frivillig</a>
+				<button class="btn-secondary mb-8 mr-8">Mer informasjon</button>
+			</div>
 		</div>
-	</div>
-	<img
-		class="rounded-lg shadow-sm col-span-2"
-		alt={homePage.content.topBannerImage.description}
-		src={homePage.content.topBannerImage.url}
-	/>
-</Card>
+		<img
+			class="rounded-lg shadow-sm col-span-2"
+			alt={homePage.content.topBannerImage.description}
+			src={homePage.content.topBannerImage.url}
+		/>
+	</Card>
 
-<News {articles} />
+	<News {articles} />
+</div>

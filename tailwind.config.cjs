@@ -8,6 +8,11 @@ const config = {
 		extend: {
 			colors: {
 				sky: colors.sky
+			},
+			height: {
+				128: '32rem',
+				192: '48rem',
+				256: '64rem'
 			}
 		}
 	}

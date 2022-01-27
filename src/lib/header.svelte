@@ -1,13 +1,11 @@
 <header class="px-6 py-4">
 	<nav class="flex items-center justify-between bg-none text-none-content">
-		<div class="flex-1 flex items-center">
-			<div class="whitespace-pre uppercase">World<br />Triathlon<br />Cup Bergen</div>
-			<div class="px-2 mx-2 w-24 md:w-auto">
-				<a class="text-lg font-bold" href="/">
-					<img alt="World triathlon cup Bergen 2022" src="/2022.svg" />
-				</a>
+		<a href="/" class="flex-1 flex items-center">
+			<div class="whitespace-pre uppercase text-right">World<br />Triathlon<br />Cup Bergen</div>
+			<div class="px-2 ml-4 w-24 md:w-auto">
+				<img alt="World triathlon cup Bergen 2022" src="/2022.svg" />
 			</div>
-		</div>
+		</a>
 
 		<div class="flex-none hidden lg:flex">
 			<div class="flex items-stretch">

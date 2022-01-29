@@ -39,7 +39,7 @@
 			</p>
 			<div class="card-actions">
 				<a class="btn-primary mb-8 mr-8" href="/volunteers">Meld deg som frivillig</a>
-				<button class="btn-secondary mb-8 mr-8">Mer informasjon</button>
+				<a class="btn-secondary mb-8 mr-8" href="/news/frivillig">Mer informasjon</a>
 			</div>
 		</div>
 		<img

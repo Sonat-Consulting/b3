@@ -28,8 +28,8 @@
 		return {
 			renderNode: {
 				[BLOCKS.PARAGRAPH]: (node, next) => `<p class="mb-6">${next(node.content)}</p>`,
-				[BLOCKS.UL_LIST]: (node, next) => `<ul class="list-disc">${next(node.content)}</ul>`,
-				[BLOCKS.OL_LIST]: (node, next) => `<ol class="list-decimal">${next(node.content)}</ol>`,
+				[BLOCKS.UL_LIST]: (node, next) => `<ul class="list-disc ml-14">${next(node.content)}</ul>`,
+				[BLOCKS.OL_LIST]: (node, next) => `<ol class="list-decimal ml-14">${next(node.content)}</ol>`,
 				[BLOCKS.LIST_ITEM]: (node, next) => `<li>${next(node.content)}</li>`,
 				[BLOCKS.HEADING_1]: (node, next) => `<h1 class="text-4xl">${next(node.content)}</h1>`,
 				[BLOCKS.HEADING_2]: (node, next) => `<h2 class="text-3xl">${next(node.content)}</h2>`,
@@ -51,7 +51,7 @@
 
 <div class="container flex flex-col mx-auto article">
 	<div
-		class="container max-w-screen-md mx-auto pt-6 md:pt-12 pb-6 px-6 mb-3 flex items-center flex-col"
+		class="container max-w-screen-md mx-auto pt-6 md:pt-12 pb-6 px-6 mb-3 flex flex-col"
 	>
 		<h1 class="text-4xl mb-6">{article.title}</h1>
 

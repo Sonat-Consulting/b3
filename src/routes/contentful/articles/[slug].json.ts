@@ -11,6 +11,21 @@ export const get = async ({ params }): Promise<EndpointOutput<any>> => {
 					ingress
 					body {
 						json
+						links {
+							assets {
+								block {
+									sys {
+										id
+									}
+									url
+									title
+									width
+									height
+									description
+								}
+							}
+						}
+						
 					}
 					date
 					articleHeroImage {

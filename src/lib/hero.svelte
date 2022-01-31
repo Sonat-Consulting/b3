@@ -1,12 +1,7 @@
 <div class="w-full aspect-video relative overflow-hidden h-96 xl:h-112">
-	<video
-		playsinline
-		autoplay
-		loop
-		muted
-		class="absolute top-0 left-0 object-cover h-full w-full"
-		poster="/video-poster.png"
-	>
-		<source src="/man_riding_a_bicycle_along_a_river.mp4" type="video/mp4" />
-	</video>
+	<img
+		alt="Cyclists competing during world cup in Bergen"
+		src="/cyclists_at_bryggen_bergen.jpeg"
+		class="absolute top-0 left-0 object-cover w-full h-full"
+	/>
 </div>

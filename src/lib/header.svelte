@@ -13,7 +13,7 @@
 
 		<div class="flex-none">
 			<div class="flex items-stretch">
-				<a class="btn-primary" href="/volunteers">Meld deg som frivillig</a>
+				<a class="btn-primary" href="https://bte.mobilise.no/Applicant.aspx?arr=9082758">Meld deg som frivillig</a>
 			</div>
 		</div>
 	</nav>

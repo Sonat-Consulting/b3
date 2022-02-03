@@ -1,7 +1,12 @@
 <div class="w-full aspect-video relative overflow-hidden h-96 xl:h-112">
-	<img
-		alt="Cyclists competing during world cup in Bergen"
-		src="/cyclists_at_bryggen_bergen.jpeg"
-		class="absolute top-0 left-0 object-cover w-full h-full"
-	/>
+	<video
+		playsinline
+		autoplay
+		loop
+		muted
+		class="absolute top-0 left-0 object-cover h-full w-full"
+		poster="/rundemannen_poster.jpg"
+	>
+		<source src="/rundemannen.mp4" type="video/mp4" />
+	</video>
 </div>

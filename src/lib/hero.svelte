@@ -7,6 +7,6 @@
 		class="absolute top-0 left-0 object-cover h-full w-full"
 		poster="/rundemannen_poster.jpg"
 	>
-		<source src="/rundemannen.mp4" type="video/mp4" />
+		<source src="/rundemannen_large.mp4" type="video/mp4" />
 	</video>
 </div>

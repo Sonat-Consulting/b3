@@ -6,7 +6,7 @@
 
 <Header />
 
-<main>
+<main class="pb-12">
 	<slot />
 </main>
 

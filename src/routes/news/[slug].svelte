@@ -57,7 +57,7 @@
 
 <Header menuItems={menuItems} />
 
-<main class="container flex flex-col mx-auto article mt-20 mb-32">
+<main class="container flex flex-col mx-auto article mt-20 mb-40">
     <div
             class="container max-w-screen-md mx-auto px-6 flex flex-col"
     >

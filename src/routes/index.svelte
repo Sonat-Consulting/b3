@@ -39,7 +39,7 @@
 
 <Hero/>
 
-<main class="container flex flex-col mx-auto mt-20 mb-32">
+<main class="container flex flex-col mx-auto mt-20 mb-40">
     <Card>
         <div>
             <h1 class="text-4xl font-bold mb-4">{homePage.content.topBannerTitle}</h1>

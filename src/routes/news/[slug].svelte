@@ -18,6 +18,7 @@
     import {documentToHtmlString} from '@contentful/rich-text-html-renderer';
     import News from '$lib/news.svelte';
     import Header from '$lib/header.svelte';
+    import HorizontalPageDivider from '$lib/horizontalPageDivider.svelte';
     import type {MenuItem} from "$lib/contentful/types/MenuItemCollectionResponse";
 
     export let article;
@@ -56,9 +57,9 @@
 
 <Header menuItems={menuItems} />
 
-<div class="container flex flex-col mx-auto article">
+<main class="container flex flex-col mx-auto article mt-20 mb-32">
     <div
-            class="container max-w-screen-md mx-auto pt-6 md:pt-12 pb-6 px-6 mb-3 flex flex-col"
+            class="container max-w-screen-md mx-auto px-6 flex flex-col"
     >
         <h1 class="text-4xl mb-6">{article.title}</h1>
 
@@ -73,5 +74,9 @@
         {@html documentToHtmlString(article.body.json, renderOptions(article.body.links))}
     </div>
 
+    <HorizontalPageDivider>
+        Siste nyheter fra Bergen Triathlon Events
+    </HorizontalPageDivider>
+
     <News {articles}/>
-</div>
+</main>

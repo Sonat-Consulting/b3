@@ -1,4 +1,4 @@
-<footer class="footer-1 bg-[#333333] pt-8 pb-8 md:pt-16 text-white px-4">
+<footer class="footer-1 pt-8 pb-8 md:pt-16 px-4 border-t-2 border-gray-200">
 	<div class="container mx-auto">
 		<!-- Visible on sm screen only -->
 		<div class="w-full md:hidden items-start items-center flex flex-col mb-10 md:mb-0">
@@ -98,7 +98,7 @@
 			</div>
 		</div>
 
-		<div class="mt-6 pt-6 sm:px-0 sm:mt-8 sm:pt-8 border-t border-sky-300">
+		<div class="mt-6 pt-6 sm:px-0 sm:mt-8 sm:pt-8">
 			<h6 class="font-bold mb-2">Bergen Triathlon Events AS</h6>
 			<p class="text-sm">Org nr. 925 926 477</p>
 		</div>

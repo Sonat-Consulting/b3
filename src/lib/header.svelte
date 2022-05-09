@@ -41,7 +41,7 @@
 
         <div class="pt-2 pr-5 pb-5 flex flex-col items-end" class:hidden="{!isOpen}">
             {#each menuItems as menuItem}
-                <a class="block text-lg px-2 mb-3 font-semibold underline rounded hover:bg-sky-300"
+                <a class="block text-lg px-2 mb-5 font-semibold underline rounded hover:bg-sky-300"
                    href="{menuItem.url}">{menuItem.text}</a>
             {/each}
         </div>

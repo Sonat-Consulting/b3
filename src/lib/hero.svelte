@@ -1,6 +1,7 @@
 <div class="w-full aspect-video relative overflow-hidden h-96 xl:h-112">
 	<video
 		playsinline
+		preload="auto"
 		autoplay
 		loop
 		muted

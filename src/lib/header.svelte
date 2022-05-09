@@ -10,10 +10,12 @@
         <div class="px-7 py-3 flex items-center justify-between">
             <div class="flex items-center">
                 <a href="/" class="flex flex-row items-center">
-                    <div class="whitespace-pre uppercase text-right">
-                        World<br/>Triathlon<br/>Cup Bergen
+                    <div class="flex flex-col text-right uppercase">
+                        <span>World</span>
+                        <span>Triathlon</span>
+                        <span>Cup Bergen</span>
                     </div>
-                    <div class="px-2 ml-4 h-full">
+                    <div class="px-2 ml-4 h-full hidden md:block">
                         <img class="h-10 md:h-14" alt="World triathlon cup Bergen 2022" src="/2022.svg"/>
                     </div>
                 </a>

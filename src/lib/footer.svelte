@@ -98,15 +98,15 @@
             </div>
         </div>
 
-        <div class="flex justify-between">
+        <div class="md:flex md:justify-between">
             <div class="mt-6 pt-6 sm:px-0 sm:mt-8 sm:pt-8">
                 <h6 class="font-bold mb-2">Bergen Triathlon Events AS</h6>
                 <p class="text-sm">Org nr. 925 926 477</p>
             </div>
 
-            <div class="mt-6 pt-6 sm:px-0 sm:mt-8 sm:pt-8 text-right">
+            <div class="mt-6 pt-6 sm:px-0 sm:mt-8 sm:pt-8 md:text-right">
                 <a href="https://sonat.no" class="hover:underline">
-                    <h6 class="font-bold mb-2">Tjenesten er levert av Sonat Consulting AS</h6>
+                    <h6 class="mb-2 font-bold">Tjenesten er levert av Sonat Consulting AS</h6>
                     <svg class="fill-current h-[0.875rem] inline-block" viewBox="0 0 775.56 119.06">
                         <title>Sonat Consulting AS</title>
                         <path

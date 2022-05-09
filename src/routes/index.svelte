@@ -22,6 +22,7 @@
     import Hero from '$lib/hero.svelte';
     import Card from '$lib/card.svelte';
     import News from '$lib/news.svelte';
+    import HorizontalPageDivider from '$lib/horizontalPageDivider.svelte';
     import type {Article} from '$lib/contentful/types/Article';
     import type {MenuItem} from "$lib/contentful/types/MenuItemCollectionResponse";
 
@@ -38,7 +39,7 @@
 
 <Hero/>
 
-<div class="container flex flex-col mx-auto">
+<main class="container flex flex-col mx-auto mt-20 mb-32">
     <Card>
         <div>
             <h1 class="text-4xl font-bold mb-4">{homePage.content.topBannerTitle}</h1>
@@ -58,5 +59,9 @@
         />
     </Card>
 
+    <HorizontalPageDivider>
+        Siste nyheter fra Bergen Triathlon Events
+    </HorizontalPageDivider>
+
     <News {articles}/>
-</div>
+</main>

@@ -1,5 +1,5 @@
 <script context="module" lang="ts">
-    import {HomePage} from '$lib/contentful/types/HomePage';
+    import type {HomePage} from '$lib/contentful/types/HomePage';
 
     export async function load({fetch}): Promise<any> {
         const [homePageRes, articlesRes, menuRes] = await Promise.all([

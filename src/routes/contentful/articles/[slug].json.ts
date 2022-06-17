@@ -5,34 +5,57 @@ import graphQLClient from '$lib/contentful/client';
 export const get = async ({ params }): Promise<EndpointOutput<any>> => {
 	const query = gql`
 		query GetArticleBySlug {
-			articleCollection(where: {slug: "${params.slug}"}, limit: 1){
-				items {
-					title
-					ingress
-					body {
-						json
-						links {
-							assets {
-								block {
-									sys {
-										id
-									}
-									url
-									title
-									width
-									height
-									description
-								}
-							}
+			articleCollection(where: {slug: "${params.slug}"}, limit: 1) {
+			items {
+				title
+				ingress
+				body {
+				json
+				links {
+					assets {
+					block {
+						sys {
+						id
 						}
-						
+						url
+						title
+						width
+						height
+						description
 					}
-					date
-					articleHeroImage {
-					  url
-					  title
 					}
-  				} 
+					entries {
+					inline {
+						sys {
+						id
+						}
+						__typename
+						... on Article {
+						title
+						slug
+						}
+					}
+					block {
+						sys {
+						id
+						}
+						__typename
+						... on IFrame {
+						title
+						url
+						width
+						height
+						}
+					}
+					}
+				}
+				}
+				date
+				articleHeroImage {
+				url
+				title
+				}
+			}
 			}
 		}
 	`;

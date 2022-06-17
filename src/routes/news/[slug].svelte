@@ -20,15 +20,25 @@
     import Header from '$lib/header.svelte';
     import HorizontalPageDivider from '$lib/horizontalPageDivider.svelte';
     import type {MenuItem} from "$lib/contentful/types/MenuItemCollectionResponse";
+    import type { Article, ArticleLinks, EntryBlock, IFrameEntry } from '$lib/contentful/types/Article';
 
-    export let article;
-    export let articles;
+    export let article: Article;
+    export let articles: Article[];
     export let menuItems: MenuItem[] = [];
 
-    function renderOptions(links) {
+    function renderOptions(links: ArticleLinks) {
+        // create an asset map
         const assetMap = new Map();
+        // loop through the assets and add them to the map
         for (const asset of links.assets.block) {
             assetMap.set(asset.sys.id, asset);
+        }
+
+        // create an entry map
+        const entryMap = new Map<string, EntryBlock>();
+        // loop through the block linked entries and add them to the map
+        for (const entry of links.entries.block) {
+            entryMap.set(entry.sys.id, entry);
         }
 
         return {
@@ -44,7 +54,31 @@
                 [BLOCKS.EMBEDDED_ASSET]: (node, next) => {
                     const asset = assetMap.get(node.data.target.sys.id);
                     return `<img src=${asset.url} alt="${asset.title}" />`;
-                }
+                },
+                [BLOCKS.EMBEDDED_ENTRY]: (node, next) => {
+                    // https://www.contentful.com/blog/2021/04/14/rendering-linked-assets-entries-in-contentful/
+                    // find the entry in the entryMap by ID
+                    const entry = entryMap.get(node.data.target.sys.id);
+
+                    // render the entries as needed by looking at the __typename 
+                    // referenced in the GraphQL query
+                    if (entry.__typename === "IFrame") {
+                        const iframeElementString = `
+                            <iframe
+                                src="${(entry as IFrameEntry).url}"
+                                height="${(entry as IFrameEntry).height}"
+                                width="${(entry as IFrameEntry).width}"
+                                frameBorder="0"
+                                scrolling="no"
+                                title="${(entry as IFrameEntry).title}"
+                            >Det ser ut til den innebygde iframen ikke ble lastet inn, prøv igjen senere eller kontakt sideadministrator.</iframe>
+                        `;
+                        return iframeElementString;
+                    } else {
+                        console.debug("Nothing");
+                        return "nothing";
+                    }
+                },
             }
         };
     }
@@ -67,8 +101,8 @@
 
         <img
                 class="rounded-xl mb-6 w-full"
-                alt={article.articleHeroImage.title}
-                src={article.articleHeroImage.url}
+                alt={article.articleHeroImage?.title}
+                src={article.articleHeroImage?.url}
         />
 
         {@html documentToHtmlString(article.body.json, renderOptions(article.body.links))}

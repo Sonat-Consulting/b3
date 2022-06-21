@@ -1,7 +1,8 @@
 # Bergen Triathlon website
+
 Official website for the Bergen Triathlon.
 
-Frontend is written in Svelte with content being served from a ContentFul backend, currently at https://app.contentful.com/spaces/wi3d49ltoppx
+Frontend is written in Svelte with content being served from a ContentFul backend, currently at https://app.contentful.com/spaces/{space-id}
 
 The content is being fetched using the Contentful [GraphQL Content API](https://www.contentful.com/developers/docs/references/graphql/)
 
@@ -10,14 +11,14 @@ The content is being fetched using the Contentful [GraphQL Content API](https://
 - [Node.js LTS](https://nodejs.org/en/)
 
 1. Add a file with name `.env` to add contentful tokens. Find the access token under `Settings` -> `API Keys` in contentful dashboard.
+
 ```
 VITE_CONTENTFUL_DELIVERY_API_ACCESS_TOKEN=Fetch-Token-From-Contentful-backend
-VITE_CONTENTFUL_SPACE_ID=wi3d49ltoppx
+VITE_CONTENTFUL_SPACE_ID={space-id}
 ```
 
 2. Run `npm install`
 3. Run `npm run dev` to run the development server
-
 
 ## Building
 

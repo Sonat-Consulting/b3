@@ -1,11 +1,11 @@
 import type { EndpointOutput } from '@sveltejs/kit/types/endpoint';
 import { gql } from 'graphql-request';
-import graphQLClient from '$lib/contentful/client';
+import graphQLClient, { isPreviewMode } from '$lib/contentful/client';
 
 export const get = async (): Promise<EndpointOutput<any>> => {
 	const query = gql`
 		query GetArticles {
-			articles: articleCollection(order: date_DESC, limit: 10) {
+			articles: articleCollection(preview: ${isPreviewMode}, order: date_DESC, limit: 10) {
 				items {
 					slug
 					title

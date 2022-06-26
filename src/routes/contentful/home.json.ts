@@ -1,12 +1,12 @@
 import type { EndpointOutput } from '@sveltejs/kit/types/endpoint';
 import { gql } from 'graphql-request';
 import type { HomePage } from '$lib/contentful/types/HomePage';
-import graphQLClient from '$lib/contentful/client';
+import graphQLClient, { isPreviewMode } from '$lib/contentful/client';
 
 export const get = async (): Promise<EndpointOutput<HomePage>> => {
 	const query = gql`
 		query GetHomePage {
-			content: homePage(id: "3FOzAwqY6CSeWlfm1Ef7WT") {
+			content: homePage(preview: ${isPreviewMode}, id: "3FOzAwqY6CSeWlfm1Ef7WT") {
 				topBannerTitle
 				topBannerSubtitle
 				topBannerImage {

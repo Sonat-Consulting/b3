@@ -3,5 +3,7 @@
     publish = "build/"
 
 [context.deploy-preview]
-VITE_CONTENTFUL_DELIVERY_API_ACCESS_TOKEN = "$VITE_CONTENTFUL_PREVIEW_API_ACCESS_TOKEN"
-VITE_CONTENTFUL_PREVIEW = "enabled"
+    command = "VITE_CONTENTFUL_DELIVERY_API_ACCESS_TOKEN=$VITE_CONTENTFUL_PREVIEW_API_ACCESS_TOKEN npm run build"
+
+[context.deploy-preview.environment]
+    VITE_CONTENTFUL_PREVIEW = "enabled"

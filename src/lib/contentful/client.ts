@@ -12,4 +12,5 @@ const graphQLClient = new GraphQLClient(
 	}
 );
 
+export const isPreviewMode = import.meta.env.VITE_CONTENTFUL_PREVIEW == 'enabled';
 export default graphQLClient;

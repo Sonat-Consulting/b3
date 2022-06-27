@@ -9,10 +9,10 @@
 <div class="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-6">
 	{#each articles as article}
 		<ArticleLink
-			imageAltText={article.articleHeroImage.title}
+			imageAltText={article.articleHeroImage?.title}
 			url={`/news/${article.slug}`}
 			date={format(parseISO(article.date), 'MMM d, yy', { locale: nb })}
-			imageSrc={article.articleHeroImage.url}
+			imageSrc={article.articleHeroImage?.url}
 			title={article.title}
 			ingress={article.ingress}
 		/>

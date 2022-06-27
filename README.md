@@ -29,3 +29,20 @@ npm run build
 ```
 
 > You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+
+## Preview Contentful draft content
+
+Contentful can serve two kinds of content:
+- published
+- draft
+
+Both published and draft content is returned from the Contentful Graph API,
+but to retrieve draft content **a different API key is required**.
+
+Env variables required to build application with Contentful draft content:
+- `VITE_CONTENTFUL_DELIVERY_API_ACCESS_TOKEN={contentful_preview_token}`
+- `VITE_CONTENTFUL_PREVIEW=enabled`
+
+For pull requests, Netlify will create a `preview-deploy`. These deployments
+are configured with these environment variables to allow pull requests to demo
+new functionality on unpublished CMS content.

@@ -46,11 +46,20 @@
             <p class="font-light text-lg mb-8">
                 {homePage.content.topBannerSubtitle}
             </p>
-            <div class="card-actions">
-                <a class="btn-primary mb-8 mr-8" href="https://bte.mobilise.no/Applicant.aspx?arr=9082758">Meld deg som
-                    frivillig</a>
-                <a class="btn-secondary mb-8 mr-8" href="/news/frivillig">Mer informasjon</a>
-            </div>
+            {#if homePage.content.primaryLink || homePage.content.secondaryLink}
+				<div class="card-actions">
+					{#if homePage.content.primaryLink}
+						<a class="btn-primary mb-8 mr-8" href={homePage.content.primaryLink}
+							>{homePage.content.primaryLinkText}</a
+						>
+					{/if}
+					{#if homePage.content.secondaryLink}
+						<a class="btn-secondary mb-8 mr-8" href={homePage.content.secondaryLink}
+							>{homePage.content.secondaryLinkText}</a
+						>
+					{/if}
+				</div>
+			{/if}
         </div>
         <img
                 class="rounded-lg shadow-sm col-span-2"

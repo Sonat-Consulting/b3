@@ -14,6 +14,10 @@ export const get = async (): Promise<EndpointOutput<HomePage>> => {
 					title
 					description
 				}
+				primaryLink
+				primaryLinkText
+				secondaryLink
+				secondaryLinkText
 			}
 		}
 	`;

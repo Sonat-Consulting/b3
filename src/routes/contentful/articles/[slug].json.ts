@@ -10,52 +10,52 @@ export const get = async ({ params }): Promise<EndpointOutput<any>> => {
 					title
 					ingress
 					body {
-					json
-					links {
+						json
+						links {
 						assets {
-						block {
+							block {
 							sys {
-							id
+								id
+							}
+							url
+							title
+							width
+							height
+							description
+							}
 						}
+						entries {
+							inline {
+							sys {
+								id
+							}
+							__typename
+							... on Article {
+								title
+								slug
+							}
+							}
+							block {
+							sys {
+								id
+							}
+							__typename
+							... on IFrame {
+								title
+								url
+								width
+								height
+							}
+							}
+						}
+						}
+					}
+					date
+					articleHeroImage {
 						url
 						title
-						width
-						height
-						description
-					}
-					}
-					entries {
-					inline {
-						sys {
-						id
-						}
-						__typename
-						... on Article {
-						title
-						slug
-						}
-					}
-					block {
-						sys {
-						id
-						}
-						__typename
-						... on IFrame {
-						title
-						url
-						width
-						height
-						}
-					}
 					}
 				}
-				}
-				date
-				articleHeroImage {
-				url
-				title
-				}
-			}
 			}
 		}
 	`;

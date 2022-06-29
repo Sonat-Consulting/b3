@@ -7,3 +7,9 @@
 
 [context.deploy-preview.environment]
     VITE_CONTENTFUL_PREVIEW = "enabled"
+
+[context.staging]
+    command = "VITE_CONTENTFUL_DELIVERY_API_ACCESS_TOKEN=$VITE_CONTENTFUL_PREVIEW_API_ACCESS_TOKEN npm run build"
+
+[context.staging.environment]
+    VITE_CONTENTFUL_PREVIEW = "enabled"

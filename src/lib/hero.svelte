@@ -1,3 +1,7 @@
+<script lang="ts">
+	import CountDown from '$lib/countDown.svelte';
+</script>
+
 <div class="w-full aspect-video relative overflow-hidden h-96 xl:h-112">
 	<video
 		playsinline
@@ -10,4 +14,5 @@
 	>
 		<source src="/rundemannen_large.mp4" type="video/mp4" />
 	</video>
+	<CountDown />
 </div>

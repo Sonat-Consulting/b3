@@ -3,7 +3,7 @@ const colors = require('tailwindcss/colors');
 const config = {
 	mode: 'jit',
 	purge: ['./src/**/*.{html,js,svelte,ts}'],
-
+	plugins: [require('daisyui')],
 	theme: {
 		extend: {
 			colors: {
@@ -18,6 +18,16 @@ const config = {
 				256: '64rem'
 			}
 		}
+	},
+	daisyui: {
+		styled: true,
+		themes: false,
+		base: true,
+		utils: true,
+		logs: false,
+		rtl: false,
+		prefix: '',
+		darkTheme: 'dark'
 	}
 };
 

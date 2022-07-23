@@ -18,7 +18,7 @@
 	<div class="absolute top-0 left-0 object-cover h-full w-full">
 		<div class="absolute right-5 top-5">
 			<div class="grid grid-flow-col gap-5 text-center text-black auto-cols-max">
-				<div class="flex flex-col p-2 bg-white/50 rounded-box">
+				<div class="flex flex-col p-2 bg-white/50 rounded-box items-center">
 					<span class="countdown font-mono text-black text-4xl">
 						<span style="--value:{timeToPlannedStart.days};" />
 					</span>
@@ -28,7 +28,7 @@
 						dager
 					{/if}
 				</div>
-				<div class="flex flex-col p-2 bg-white/50 rounded-box ">
+				<div class="flex flex-col p-2 bg-white/50 rounded-box items-center">
 					<span class="countdown font-mono text-4xl">
 						<span style="--value:{timeToPlannedStart.hours};" />
 					</span>
@@ -38,13 +38,13 @@
 						timer
 					{/if}
 				</div>
-				<div class="flex flex-col p-2 bg-white/50 rounded-box ">
+				<div class="flex flex-col p-2 bg-white/50 rounded-box items-center">
 					<span class="countdown font-mono text-4xl">
 						<span style="--value:{timeToPlannedStart.minutes};" />
 					</span>
 					minutt
 				</div>
-				<div class="flex flex-col p-2 bg-white/50 rounded-box ">
+				<div class="flex flex-col p-2 bg-white/50 rounded-box items-center">
 					<span class="countdown font-mono text-4xl">
 						<span style="--value:{timeToPlannedStart.seconds};" />
 					</span>

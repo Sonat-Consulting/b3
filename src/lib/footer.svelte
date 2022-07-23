@@ -17,12 +17,6 @@
 							class="border-b-2 border-solid border-sky-300 hover:border-white pb-1">Frivillige</a
 						>
 					</li>
-					<li class="mb-4">
-						<a
-							href="/news/triathlon%20verdenscup%20l%C3%B8ype%20bergen"
-							class="border-b-2 border-solid border-sky-300 hover:border-white pb-1">Løypen</a
-						>
-					</li>
 				</ul>
 			</div>
 

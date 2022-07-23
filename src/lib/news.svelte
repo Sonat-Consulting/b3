@@ -11,7 +11,7 @@
 		<ArticleLink
 			imageAltText={article.articleHeroImage?.title}
 			url={`/news/${article.slug}`}
-			date={format(parseISO(article.date), 'MMM d, yy', { locale: nb })}
+			date={article.date ? format(parseISO(article.date), 'MMM d, yy', { locale: nb }) : ''}
 			imageSrc={article.articleHeroImage?.url}
 			title={article.title}
 			ingress={article.ingress}

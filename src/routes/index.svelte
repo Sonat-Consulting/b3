@@ -42,20 +42,20 @@
 <main class="container flex flex-col mx-auto mt-20 mb-40">
 	<Card>
 		<div>
-			<h1 class="text-4xl font-bold mb-4">{homePage.content.topBannerTitle}</h1>
+			<h1 class="text-4xl font-bold mb-4">{homePage.topBannerTitle}</h1>
 			<p class="font-light text-lg mb-8">
-				{homePage.content.topBannerSubtitle}
+				{homePage.topBannerSubtitle}
 			</p>
-			{#if homePage.content.primaryLink || homePage.content.secondaryLink}
+			{#if homePage.primaryLink || homePage.secondaryLink}
 				<div class="card-actions">
-					{#if homePage.content.primaryLink}
-						<a class="btn btn-primary mb-8 mr-8" href={homePage.content.primaryLink}
-							>{homePage.content.primaryLinkText}</a
+					{#if homePage.primaryLink}
+						<a class="btn btn-primary mb-8 mr-8" href={homePage.primaryLink}
+							>{homePage.primaryLinkText}</a
 						>
 					{/if}
-					{#if homePage.content.secondaryLink}
-						<a class="btn btn-secondary mb-8 mr-8" href={homePage.content.secondaryLink}
-							>{homePage.content.secondaryLinkText}</a
+					{#if homePage.secondaryLink}
+						<a class="btn btn-secondary mb-8 mr-8" href={homePage.secondaryLink}
+							>{homePage.secondaryLinkText}</a
 						>
 					{/if}
 				</div>
@@ -63,8 +63,8 @@
 		</div>
 		<img
 			class="rounded-lg shadow-sm col-span-2"
-			alt={homePage.content.topBannerImage.description}
-			src={homePage.content.topBannerImage.url}
+			alt={homePage.topBannerImage.description}
+			src={homePage.topBannerImage.url}
 		/>
 	</Card>
 

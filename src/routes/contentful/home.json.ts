@@ -5,27 +5,29 @@ import graphQLClient, { isPreviewMode } from '$lib/contentful/client';
 
 export const get = async (): Promise<EndpointOutput<HomePage>> => {
 	const query = gql`
-		query GetHomePage {
-			content: homePage(preview: ${isPreviewMode}, id: "3FOzAwqY6CSeWlfm1Ef7WT") {
-				topBannerTitle
-				topBannerSubtitle
-				topBannerImage {
-					url
-					title
-					description
+		query GetHomePages {
+			homePages: homePageCollection(preview: ${isPreviewMode}, limit: 1) {
+				items {
+					topBannerTitle
+					topBannerSubtitle
+					topBannerImage {
+						url
+						title
+						description
+					}
+					primaryLink
+					primaryLinkText
+					secondaryLink
+					secondaryLinkText
 				}
-				primaryLink
-				primaryLinkText
-				secondaryLink
-				secondaryLinkText
 			}
 		}
 	`;
 
-	const homePage = await graphQLClient.request<HomePage>(query);
+	const res = await graphQLClient.request(query);
 
 	return {
 		status: 200,
-		body: homePage
+		body: res.homePages.items[0]
 	};
 };

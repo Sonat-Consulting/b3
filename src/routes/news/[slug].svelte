@@ -101,7 +101,7 @@
 			class="rounded-xl mb-6 w-full"
 			v-if="article.articleHeroImage"
 			alt={article.articleHeroImage?.title}
-			src={article.articleHeroImage?.url}
+			src={`${article.articleHeroImage?.url}?fm=webp&w=720&h=480`}
 		/>
 
 		{@html documentToHtmlString(article.body.json, renderOptions(article.body.links))}

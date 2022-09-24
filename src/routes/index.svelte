@@ -64,7 +64,7 @@
 		<img
 			class="rounded-lg shadow-sm col-span-2"
 			alt={homePage.topBannerImage.description}
-			src={homePage.topBannerImage.url}
+			src={`${homePage.topBannerImage.url}?fm=webp&w=720&h=480`}
 		/>
 	</Card>
 

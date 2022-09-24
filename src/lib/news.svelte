@@ -12,7 +12,7 @@
 			imageAltText={article.articleHeroImage?.title}
 			url={`/news/${article.slug}`}
 			date={article.date ? format(parseISO(article.date), 'MMM d, yy', { locale: nb }) : ''}
-			imageSrc={article.articleHeroImage?.url}
+			imageSrc={`${article.articleHeroImage?.url}?fm=webp&w=720&h=480`}
 			title={article.title}
 			ingress={article.ingress}
 		/>

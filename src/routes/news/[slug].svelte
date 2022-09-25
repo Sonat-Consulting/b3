@@ -93,18 +93,20 @@
 
 <main class="container flex flex-col mx-auto article mt-20 mb-40">
 	<div class="container max-w-screen-md mx-auto px-6 flex flex-col">
-		<h1 class="text-4xl mb-6">{article.title}</h1>
+		<h1 class="text-4xl mb-8 text-center leading-normal">{article.title}</h1>
 
-		<p class="mb-6">{article.ingress}</p>
+		<p class="mb-8 leading-relaxed">{article.ingress}</p>
 
 		<img
-			class="rounded-xl mb-6 w-full"
+			class="rounded-xl mb-8 w-full"
 			v-if="article.articleHeroImage"
 			alt={article.articleHeroImage?.title}
 			src={`${article.articleHeroImage?.url}?fm=webp&w=720&h=480`}
 		/>
 
-		{@html documentToHtmlString(article.body.json, renderOptions(article.body.links))}
+		<div class="leading-relaxed">
+			{@html documentToHtmlString(article.body.json, renderOptions(article.body.links))}
+		</div>
 	</div>
 
 	<HorizontalPageDivider>Siste nyheter fra Bergen Triathlon Events</HorizontalPageDivider>

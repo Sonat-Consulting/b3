@@ -86,7 +86,7 @@
 </script>
 
 <svelte:head>
-	<title>Bergen Triathlon Events</title>
+	<title>Bergen Triathlon Events | {article.title}</title>
 </svelte:head>
 
 <Header {menuItems} />

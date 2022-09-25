@@ -58,11 +58,12 @@
 				</div>
 			{/if}
 		</div>
-		<img
-			class="rounded-lg shadow-sm col-span-2"
-			alt={homePage.topBannerImage.description}
-			src={`${homePage.topBannerImage.url}?fm=webp&w=720&h=480`}
-		/>
+        <div class="col-span-2 relative" style="padding-bottom: 56.25%;">
+            <iframe title="Bergen Triathlon Events Vimeo Video"
+                    class="absolute w-full h-full top-0 left-0 rounded-lg"
+                    src="https://player.vimeo.com/video/752038772?h=c4e9643992&autoplay=1&title=0&byline=0&portrait=0"
+                    allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
 	</Card>
 
 	<HorizontalPageDivider>Siste nyheter fra Bergen Triathlon Events</HorizontalPageDivider>

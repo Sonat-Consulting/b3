@@ -10,19 +10,24 @@
         <div class="px-7 py-3 flex items-center justify-between">
             <div class="flex items-center">
                 <a href="/" class="flex flex-row items-center">
-                    <div class="flex flex-col text-right uppercase">
+                    <div class="flex flex-col text-right uppercase font-semibold">
                         <span>World</span>
                         <span>Triathlon</span>
                         <span>Cup Bergen</span>
-                    </div>
-                    <div class="px-2 ml-4 h-full hidden md:block">
-                        <img class="h-10 md:h-14" alt="World triathlon cup Bergen 2022" src="/2022.svg"/>
                     </div>
                 </a>
             </div>
 
             {#if menuItems?.length > 0}
-                <div>
+
+                <div class="hidden lg:block">
+                    {#each menuItems as menuItem}
+                        <a class="text-lg mr-12 last:mr-0 font-semibold rounded hover:underline"
+                           href="{menuItem.url}">{menuItem.text}</a>
+                    {/each}
+                </div>
+
+                <div class="block lg:hidden">
                     <button type="button" on:click="{() => isOpen = !isOpen}" class="block hover:text-gray-500">
                         <svg class:hidden="{isOpen}" class="h-7 fill-current" viewBox="0 0 122.88 95.95">
                             <g>
@@ -41,9 +46,9 @@
 
         </div>
 
-        <div class="pt-2 pr-5 pb-5 flex flex-col items-end" class:hidden="{!isOpen}">
+        <div class="pt-2 pr-5 pb-5 flex flex-col items-end lg:hidden" class:hidden="{!isOpen}">
             {#each menuItems as menuItem}
-                <a class="block text-lg px-2 mb-5 font-semibold underline rounded hover:bg-sky-300"
+                <a class="block text-lg mb-5 font-semibold rounded hover:underline"
                    href="{menuItem.url}">{menuItem.text}</a>
             {/each}
         </div>

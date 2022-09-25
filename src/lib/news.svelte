@@ -6,12 +6,12 @@
 	export let articles: Article[];
 </script>
 
-<div class="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-6">
+<div class="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 px-8 md:px-0">
 	{#each articles as article}
 		<ArticleLink
 			imageAltText={article.articleHeroImage?.title}
 			url={`/news/${article.slug}`}
-			date={article.date ? format(parseISO(article.date), 'MMM d, yy', { locale: nb }) : ''}
+			date={article.date ? format(parseISO(article.date), 'd. MMMM yyyy', { locale: nb }) : ''}
 			imageSrc={`${article.articleHeroImage?.url}?fm=webp&w=720&h=480`}
 			title={article.title}
 			ingress={article.ingress}

@@ -5,9 +5,9 @@
     export let menuItems: MenuItem[] = [];
 </script>
 
-<header class="bg-white border-b-2 border-gray-200">
+<header class="bg-gray-100 border-b-2 border-gray-200">
     <div class="max-w-screen-2xl m-auto">
-        <div class="px-7 py-3 flex items-center justify-between">
+        <div class="px-5 py-4 flex items-center justify-between">
             <div class="flex items-center">
                 <a href="/" class="flex flex-row items-center">
                     <div class="flex flex-col text-right uppercase font-semibold">

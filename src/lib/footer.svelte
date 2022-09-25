@@ -4,18 +4,16 @@
         <div class="w-full md:hidden items-start items-center flex flex-col mb-10 md:mb-0">
             <p class="text-center mb-4">World Triathlon Cup Bergen</p>
             <p class="text-4xl mb-8">28. august 2022</p>
-            <a class="btn btn-primary" href="https://bte.mobilise.no/Applicant.aspx?arr=9082758"
-            >Meld deg som frivillig</a
-            >
+            <a class="btn btn-primary" target="_blank" href="https://bte.mobilise.no/Applicant.aspx?arr=9082758">
+                Meld deg som frivillig
+            </a>
         </div>
         <div class="flex sm:-mx-4">
             <div class="w-1/2 md:w-1/4 sm:px-4">
                 <ul class="list-none footer-links">
                     <li class="mb-4">
-                        <a
-                                href="https://bte.mobilise.no/Applicant.aspx?arr=9082758"
-                                class="border-b-2 border-solid border-sky-300 hover:border-white pb-1">Frivillige</a
-                        >
+                        <a href="https://bte.mobilise.no/Applicant.aspx?arr=9082758" target="_blank"
+                           class="border-b-2 border-solid border-sky-300 hover:border-white pb-1">Frivillige</a>
                     </li>
                 </ul>
             </div>
@@ -23,14 +21,14 @@
             <div class="hidden md:flex md:w-2/4 items-start items-center flex-col -mt-8">
                 <p class="text-center mb-4">World Triathlon Cup Bergen</p>
                 <p class="text-4xl mb-8">28. august 2022</p>
-                <a class="btn btn-primary" href="https://bte.mobilise.no/Applicant.aspx?arr=9082758"
-                >Meld deg som frivillig</a
-                >
+                <a class="btn btn-primary" href="https://bte.mobilise.no/Applicant.aspx?arr=9082758" target="_blank">
+                    Meld deg som frivillig
+                </a>
             </div>
 
             <div class="w-1/2 md:w-1/4 sm:px-4">
                 <div class="mb-5 flex flex-row items-center justify-end">
-                    <a href="https://www.instagram.com/worldtriathlon">
+                    <a target="_blank" href="https://www.instagram.com/worldtriathlon">
                         <svg
                                 class="inline-block"
                                 width="24"
@@ -67,15 +65,9 @@
                     </a>
                 </div>
                 <div class="flex flex-row items-center justify-end">
-                    <a href="https://www.facebook.com/Bergen-Triatlon-Events-131515645776593">
-                        <svg
-                                class="inline-block"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 13 22"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                        >
+                    <a target="_blank" href="https://www.facebook.com/Bergen-Triatlon-Events-131515645776593">
+                        <svg class="inline-block" width="24" height="24" viewBox="0 0 13 22" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
                             <path
                                     d="M12 1H9C7.67392 1 6.40215 1.52678 5.46447 2.46447C4.52678 3.40215 4 4.67392 4 6V9H1V13H4V21H8V13H11L12 9H8V6C8 5.73478 8.10536 5.48043 8.29289 5.29289C8.48043 5.10536 8.73478 5 9 5H12V1Z"
                                     stroke="#56CCF2"
@@ -84,9 +76,7 @@
                                     stroke-linejoin="round"
                             />
                         </svg>
-                        <span class="ml-2 border-b-2 border-solid border-sky-300 hover:border-white pb-1"
-                        >Facebook</span
-                        >
+                        <span class="ml-2 border-b-2 border-solid border-sky-300 hover:border-white pb-1">Facebook</span>
                     </a>
                 </div>
             </div>
@@ -99,7 +89,7 @@
             </div>
 
             <div class="mt-6 pt-6 sm:px-0 sm:mt-8 sm:pt-8 md:text-right">
-                <a href="https://sonat.no" class="hover:underline">
+                <a target="_blank" href="https://sonat.no" class="hover:underline">
                     <h6 class="mb-2 font-bold">Tjenesten er levert av Sonat Consulting AS</h6>
                     <svg class="fill-current h-[0.875rem] inline-block" viewBox="0 0 775.56 119.06">
                         <title>Sonat Consulting AS</title>

@@ -19,7 +19,6 @@
 
 <script lang="ts">
 	import Header from '$lib/header.svelte';
-	import Hero from '$lib/hero.svelte';
 	import Card from '$lib/card.svelte';
 	import News from '$lib/news.svelte';
 	import HorizontalPageDivider from '$lib/horizontalPageDivider.svelte';
@@ -36,8 +35,6 @@
 </svelte:head>
 
 <Header {menuItems} />
-
-<Hero />
 
 <main class="container flex flex-col mx-auto mt-20 mb-40">
 	<Card>

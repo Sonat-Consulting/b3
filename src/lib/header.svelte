@@ -7,7 +7,7 @@
 
 <header class="bg-gray-100 border-b-2 border-gray-200">
     <div class="max-w-screen-2xl m-auto">
-        <div class="p-8 flex items-center justify-between">
+        <div class="py-4 px-8 flex items-center justify-between">
             <div class="flex items-center">
                 <a href="/" class="flex flex-row items-center">
                     <div class="flex flex-col text-right uppercase font-semibold">

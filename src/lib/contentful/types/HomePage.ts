@@ -1,4 +1,4 @@
-export type HomePageContent = {
+export type HomePage = {
 	topBannerTitle: string;
 	topBannerSubtitle: string;
 	topBannerImage: {
@@ -10,8 +10,4 @@ export type HomePageContent = {
 	primaryLinkText: string | null;
 	secondaryLink: string | null;
 	secondaryLinkText: string | null;
-};
-
-export type HomePage = {
-	content: HomePageContent;
 };

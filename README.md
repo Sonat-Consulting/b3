@@ -20,6 +20,9 @@ VITE_CONTENTFUL_SPACE_ID={space-id}
 2. Run `npm install`
 3. Run `npm run dev` to run the development server
 
+## GraphQL Explorer
+Visit https://graphql.contentful.com/content/v1/spaces/{SPACE}/explore?access_token={CDA_TOKEN} to test queries agains Contentful graph api.
+
 ## Building
 
 Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:

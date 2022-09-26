@@ -1,8 +1,7 @@
-import type { EndpointOutput } from '@sveltejs/kit/types/endpoint';
 import { gql } from 'graphql-request';
 import graphQLClient, { isPreviewMode } from '$lib/contentful/client';
 
-export const get = async ({ params }): Promise<EndpointOutput<any>> => {
+export const GET = async ({ params }): Promise<Response> => {
 	const query = gql`
 		query GetArticleBySlug {
 			articleCollection(preview: ${isPreviewMode}, where: {slug: "${params.slug}"}, limit: 1) {
@@ -63,13 +62,8 @@ export const get = async ({ params }): Promise<EndpointOutput<any>> => {
 	const res = await graphQLClient.request(query);
 
 	if (res.articleCollection.items <= 0) {
-		return {
-			status: 404
-		};
+		return new Response(JSON.stringify({}));
 	}
 
-	return {
-		status: 200,
-		body: res.articleCollection.items[0]
-	};
+	return new Response(JSON.stringify(res.articleCollection.items[0]));
 };

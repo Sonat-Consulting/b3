@@ -1,12 +1,8 @@
-import type { EndpointOutput } from '@sveltejs/kit/types/endpoint';
 import { gql } from 'graphql-request';
 import graphQLClient, { isPreviewMode } from '$lib/contentful/client';
-import type {
-	MenuItem,
-	MenuItemCollectionResponse
-} from '$lib/contentful/types/MenuItemCollectionResponse';
+import type { MenuItemCollectionResponse } from '$lib/contentful/types/MenuItemCollectionResponse';
 
-export const get = async (): Promise<EndpointOutput<MenuItem[]>> => {
+export const GET = async (): Promise<Response> => {
 	const query = gql`
 		query GetMenuItems {
           menuLinksCollection(preview: ${isPreviewMode}, limit: 10) {
@@ -20,8 +16,5 @@ export const get = async (): Promise<EndpointOutput<MenuItem[]>> => {
 
 	const response = await graphQLClient.request<MenuItemCollectionResponse>(query);
 
-	return {
-		status: 200,
-		body: response.menuLinksCollection.items
-	};
+	return new Response(JSON.stringify(response.menuLinksCollection.items));
 };

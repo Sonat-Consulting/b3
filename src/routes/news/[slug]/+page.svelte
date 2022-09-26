@@ -1,22 +1,3 @@
-<script context="module" lang="ts">
-	export async function load({ page, fetch }): Promise<any> {
-		const [articleRes, articlesRes, menuRes] = await Promise.all([
-			fetch(`/contentful/articles/${page.params.slug}.json`),
-			fetch(`/contentful/articles.json`),
-			fetch('/contentful/menu.json')
-		]);
-
-		if (articlesRes.ok) {
-			const [article, articles, menuItems] = await Promise.all([
-				articleRes.json(),
-				articlesRes.json(),
-				menuRes.json()
-			]);
-			return { props: { menuItems, article, articles } };
-		}
-	}
-</script>
-
 <script lang="ts">
 	import { BLOCKS } from '@contentful/rich-text-types';
 	import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
@@ -31,9 +12,15 @@
 		IFrameEntry
 	} from '$lib/contentful/types/Article';
 
-	export let article: Article;
-	export let articles: Article[];
-	export let menuItems: MenuItem[] = [];
+	type Props = {
+		article: Article;
+		articles: Article[];
+		menuItems: MenuItem[];
+	};
+
+	export let data: Props;
+
+	const { article, articles, menuItems } = data;
 
 	function renderOptions(links: ArticleLinks) {
 		const assetMap = new Map();

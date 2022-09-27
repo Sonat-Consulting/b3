@@ -1,15 +1,20 @@
 <script lang="ts">
-	export let url: string;
-	export let date: string;
-	export let imageSrc: string;
-	export let imageAltText: string;
-	export let title: string;
-	export let ingress: string;
+	import { format, parseISO } from 'date-fns/index.js';
+	import { nb } from 'date-fns/locale/index.js';
+	import type { Article } from '$lib/types/b3';
+
+	export let article: Article;
+
+	$: date = article?.date ? format(parseISO(article.date), 'd. MMMM yyyy', { locale: nb }) : '';
 </script>
 
-<a href={url}>
+<a href={`/news/${article.slug}`}>
 	<div class="relative">
-		<img src={imageSrc} alt={imageAltText} class="rounded-lg shadow-sm w-full object-cover" />
+		<img
+			src={`${article.articleHeroImage?.url}?fm=webp&w=720&h=480`}
+			alt={article.articleHeroImage?.title}
+			class="rounded-lg shadow-sm w-full object-cover"
+		/>
 		<div
 			class="absolute bottom-4 right-4 font-semibold rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white text-sm px-2 py-0.5"
 		>
@@ -17,6 +22,6 @@
 		</div>
 	</div>
 
-	<div class="mt-6 mb-4 text-xl font-semibold">{title}</div>
-	<div class="leading-relaxed">{ingress}</div>
+	<div class="mt-6 mb-4 text-xl font-semibold">{article.title}</div>
+	<div class="leading-relaxed">{article.ingress}</div>
 </a>

@@ -9,7 +9,9 @@
 
 	export let data: ArticlePageData;
 
-	const { article, articles, menuItems } = data;
+	$: article = data.article;
+	$: articles = data.articles;
+	$: menuItems = data.menuItems;
 
 	function renderOptions(links: ArticleLinks) {
 		const assetMap = new Map();

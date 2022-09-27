@@ -1,8 +1,18 @@
 import { Document } from '@contentful/rich-text-types';
 
-type MenuItem = {
+type Asset = {
 	url: string;
-	text: string;
+	title: string;
+	sys: {
+		id: string;
+	};
+};
+
+type Entry = {
+	__typename: string;
+	sys: {
+		id: string;
+	};
 };
 
 type Article = {
@@ -13,7 +23,7 @@ type Article = {
 		json: Document;
 		links: ArticleLinks;
 	};
-	articleHeroImage?: {
+	articleHeroImage: {
 		title: string;
 		url: string;
 	} | null;
@@ -25,29 +35,15 @@ type Article = {
 
 type ArticleLinks = {
 	assets: {
-		block: any[];
+		block: Asset[];
 	};
 	entries: {
 		inline: any[];
-		block: EntryBlock[];
+		block: Entry[];
 	};
 };
 
-type EntryBlock =
-	| IFrameEntry
-	| {
-			sys: {
-				id: string;
-			};
-			__typename: string;
-			[key: string]: any;
-	  };
-
-type IFrameEntry = {
-	sys: {
-		id: string;
-	};
-	__typename: 'IFrame';
+type IFrameEntry = Entry & {
 	title: string;
 	url: string;
 	width: string;
@@ -66,4 +62,9 @@ type TopBanner = {
 	primaryLinkText: string | null;
 	secondaryLink: string | null;
 	secondaryLinkText: string | null;
+};
+
+type MenuItem = {
+	url: string;
+	text: string;
 };

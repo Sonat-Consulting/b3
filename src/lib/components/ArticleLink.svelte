@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { format, parseISO } from 'date-fns/index.js';
 	import { nb } from 'date-fns/locale/index.js';
-	import type { Article } from '$lib/types/b3';
+	import type { Article } from '$lib/types/b3.contentful';
 
 	export let article: Article;
 

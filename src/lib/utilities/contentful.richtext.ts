@@ -1,21 +1,6 @@
 import { BLOCKS } from '@contentful/rich-text-types';
-import type { IFrameEntry } from '$lib/types/b3';
 import type { Options } from '@contentful/rich-text-html-renderer';
-
-type Asset = {
-	url: string;
-	title: string;
-	sys: {
-		id: string;
-	};
-};
-
-type Entry = {
-	__typename: string;
-	sys: {
-		id: string;
-	};
-};
+import type { Asset, Entry, IFrameEntry } from '$lib/types/b3.contentful';
 
 /**
  * Create options for Contentful Rich Text renderer

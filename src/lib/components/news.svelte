@@ -7,7 +7,7 @@
 </script>
 
 <div class="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 px-8 md:px-0">
-	{#each articles as article}
+	{#each articles as article (article.slug)}
 		<ArticleLink
 			imageAltText={article.articleHeroImage?.title}
 			url={`/news/${article.slug}`}

@@ -1,7 +1,7 @@
 import type { GraphQLClient } from 'graphql-request';
 import type { IHomePageService, TopBanner } from '../../../b3';
 import { gql } from 'graphql-request';
-import graphQLClient, { isPreviewMode } from '$lib/contentful/client';
+import graphQLClient, { isPreviewMode } from '$lib/infrastructure/contentful/graphQLClient';
 
 export class HomePageService implements IHomePageService {
 	constructor(private readonly client: GraphQLClient) {}

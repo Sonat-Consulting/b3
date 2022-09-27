@@ -1,7 +1,7 @@
 import type { GraphQLClient } from 'graphql-request';
 import { gql } from 'graphql-request';
 import type { IMenuService, MenuItem } from '../../../b3';
-import graphQLClient, { isPreviewMode } from '$lib/contentful/client';
+import graphQLClient, { isPreviewMode } from '$lib/infrastructure/contentful/graphQLClient';
 
 export class MenuService implements IMenuService {
 	constructor(private readonly client: GraphQLClient) {}

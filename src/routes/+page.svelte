@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Header from '$lib/header.svelte';
-	import Card from '$lib/card.svelte';
-	import News from '$lib/news.svelte';
-	import HorizontalPageDivider from '$lib/horizontalPageDivider.svelte';
+	import Header from '$lib/components/header.svelte';
+	import Card from '$lib/components/card.svelte';
+	import News from '$lib/components/news.svelte';
+	import HorizontalPageDivider from '$lib/components/horizontalPageDivider.svelte';
 	import type { HomePageData } from '$lib/types/b3.pagedata';
 	export let data: HomePageData;
 	const { topBanner, menuItems, articles } = data;

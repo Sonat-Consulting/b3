@@ -1,6 +1,6 @@
 <script>
 	import '../app.css';
-	import Footer from '$lib/footer.svelte';
+	import Footer from '$lib/components/footer.svelte';
 </script>
 
 <slot />

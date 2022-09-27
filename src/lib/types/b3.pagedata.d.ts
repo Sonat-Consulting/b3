@@ -1,4 +1,4 @@
-import { Article, MenuItem, TopBanner } from './b3';
+import type { Article, MenuItem, TopBanner } from '$lib/types/b3.contentful';
 
 type HomePageData = {
 	topBanner: TopBanner;

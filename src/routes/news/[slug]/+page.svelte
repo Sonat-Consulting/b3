@@ -8,7 +8,7 @@
 	export let data: ArticlePageData;
 
 	$: article = data?.article;
-	$: articles = data?.articles;
+	$: articles = data?.articles.filter(({ slug }) => slug !== article.slug);
 	$: menuItems = data?.menuItems;
 </script>
 

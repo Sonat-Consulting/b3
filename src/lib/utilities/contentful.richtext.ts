@@ -1,17 +1,29 @@
 import { BLOCKS } from '@contentful/rich-text-types';
-import type { EntryBlock, IFrameEntry } from '$lib/types/b3';
+import type { IFrameEntry } from '$lib/types/b3';
 import type { Options } from '@contentful/rich-text-html-renderer';
+
+type Asset = {
+	url: string;
+	title: string;
+	sys: {
+		id: string;
+	};
+};
+
+type Entry = {
+	__typename: string;
+	sys: {
+		id: string;
+	};
+};
 
 /**
  * Create options for Contentful Rich Text renderer
  * https://www.contentful.com/blog/2021/04/14/rendering-linked-assets-entries-in-contentful/
- * @param assetMap
- * @param entryMap
+ * @param assets
+ * @param entries
  */
-const contentfulRichTextOptions = (
-	assetMap?: Map<any, any>,
-	entryMap?: Map<string, EntryBlock>
-): Partial<Options> => ({
+const contentfulRichTextOptions = (assets: Asset[], entries: Entry[]): Partial<Options> => ({
 	renderNode: {
 		[BLOCKS.PARAGRAPH]: (node, next) => `<p class="mb-6">${next(node.content)}</p>`,
 		[BLOCKS.UL_LIST]: (node, next) => `<ul class="list-disc ml-14">${next(node.content)}</ul>`,
@@ -22,11 +34,13 @@ const contentfulRichTextOptions = (
 		[BLOCKS.HEADING_3]: (node, next) => `<h3 class="text-2xl">${next(node.content)}</h3>`,
 		[BLOCKS.HEADING_4]: (node, next) => `<h4 class="text-xl">${next(node.content)}</h4>`,
 		[BLOCKS.EMBEDDED_ASSET]: (node, next) => {
-			const asset = assetMap?.get(node.data.target.sys.id);
-			return `<img src=${asset.url} alt="${asset.title}" />`;
+			const asset = assets?.find((asset) => asset.sys.id === node.data.target.sys.id);
+			if (asset) {
+				return `<img src=${asset.url} alt="${asset.title}" />`;
+			}
 		},
 		[BLOCKS.EMBEDDED_ENTRY]: (node, next) => {
-			const entry = entryMap?.get(node.data.target.sys.id);
+			const entry = entries?.find((entry) => entry.sys.id === node.data.target.sys.id);
 			if (entry?.__typename === 'IFrame') {
 				const iframeEntry = entry as IFrameEntry;
 				return `

@@ -1,8 +1,8 @@
 <script lang="ts">
+	import type { ArticlePageData } from '$lib/types/b3.pagedata';
 	import News from '$lib/components/News.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import HorizontalPageDivider from '$lib/components/PageDivider.svelte';
-	import type { ArticlePageData } from '$lib/types/b3.pagedata';
 	import ContentfulHtml from '$lib/components/ContentfulHtml.svelte';
 
 	export let data: ArticlePageData;
@@ -10,6 +10,10 @@
 	$: article = data?.article;
 	$: articles = data?.articles;
 	$: menuItems = data?.menuItems;
+	$: articleBody = article?.body.json;
+	$: articleLinks = article?.body.links;
+	$: assets = articleLinks?.assets.block;
+	$: entries = articleLinks?.entries.block;
 </script>
 
 <svelte:head>
@@ -31,7 +35,7 @@
 		/>
 
 		<div class="leading-relaxed">
-			<ContentfulHtml richTextDocument={article.body.json} articleLinks={article.body.links} />
+			<ContentfulHtml richTextDocument={articleBody} {assets} {entries} />
 		</div>
 	</div>
 

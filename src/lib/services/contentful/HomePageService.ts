@@ -5,7 +5,7 @@ import type { IHomePageService } from '$lib/types/b3.services';
 import type { TopBanner } from '$lib/types/b3';
 
 export class HomePageService implements IHomePageService {
-	constructor(private readonly client: GraphQLClient) {}
+	constructor(private readonly _client: GraphQLClient = graphQLClient) {}
 
 	async getTopBanner(): Promise<TopBanner> {
 		const query = gql`
@@ -35,7 +35,7 @@ export class HomePageService implements IHomePageService {
 			}
 		`;
 
-		const response = await graphQLClient.request(query);
+		const response = await this._client.request(query);
 
 		return response.topBanners.items[0];
 	}

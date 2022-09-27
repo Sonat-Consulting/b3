@@ -5,7 +5,7 @@ import type { IMenuService } from '$lib/types/b3.services';
 import type { MenuItem } from '$lib/types/b3';
 
 export class MenuService implements IMenuService {
-	constructor(private readonly client: GraphQLClient) {}
+	constructor(private readonly _client: GraphQLClient = graphQLClient) {}
 
 	async getMenuItems(): Promise<MenuItem[]> {
 		const query = gql`
@@ -19,7 +19,7 @@ export class MenuService implements IMenuService {
 					}
 		`;
 
-		const response = await graphQLClient.request(query);
+		const response = await this._client.request(query);
 
 		return response.menuItems.items;
 	}

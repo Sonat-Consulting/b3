@@ -12,6 +12,7 @@ export class ArticleService implements IArticleService {
 			query GetArticleBySlug {
 				articles: articleCollection(preview: ${isPreviewMode}, where: {slug: "${id}"}, limit: 1) {
 					items {
+						slug
 						title
 						ingress
 						body {

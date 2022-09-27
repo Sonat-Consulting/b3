@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { Article } from '$lib/contentful/types/Article';
-	import ArticleLink from '$lib/article/link.svelte';
+	import ArticleLink from '$lib/components/article/link.svelte';
 	import { format, parseISO } from 'date-fns/index.js';
 	import { nb } from 'date-fns/locale/index.js';
+	import type { Article } from '$lib/types/b3';
 	export let articles: Article[];
 </script>
 

@@ -1,4 +1,4 @@
-import client from '$lib/contentful/client';
+import client from '$lib/infrastructure/contentful/graphQLClient';
 import { ArticleService } from '$lib/services/contentful/ArticleService';
 import { MenuService } from '$lib/services/contentful/MenuService';
 import type { IArticleService, IMenuService } from '../../../b3';

@@ -1,7 +1,8 @@
 import type { GraphQLClient } from 'graphql-request';
-import type { Article, IArticleService } from '../../../b3';
 import { gql } from 'graphql-request';
 import graphQLClient, { isPreviewMode } from '$lib/infrastructure/contentful/graphQLClient';
+import type { IArticleService } from '$lib/types/b3.services';
+import type { Article } from '$lib/types/b3';
 
 export class ArticleService implements IArticleService {
 	constructor(private readonly client: GraphQLClient) {}

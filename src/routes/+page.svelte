@@ -3,7 +3,7 @@
 	import Card from '$lib/card.svelte';
 	import News from '$lib/news.svelte';
 	import HorizontalPageDivider from '$lib/horizontalPageDivider.svelte';
-	import type { HomePageData } from '../b3.pageData';
+	import type { HomePageData } from '$lib/types/b3.pagedata';
 	export let data: HomePageData;
 	const { topBanner, menuItems, articles } = data;
 </script>

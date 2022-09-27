@@ -1,5 +1,3 @@
-/// <reference types="@sveltejs/kit" />
-
 import { Document } from '@contentful/rich-text-types';
 
 type MenuItem = {
@@ -69,16 +67,3 @@ type TopBanner = {
 	secondaryLink: string | null;
 	secondaryLinkText: string | null;
 };
-
-interface IMenuService {
-	getMenuItems(): Promise<MenuItem[]>;
-}
-
-interface IArticleService {
-	getArticles(): Promise<Article[]>;
-	getArticleById(id: string): Promise<Article>;
-}
-
-interface IHomePageService {
-	getTopBanner(): Promise<TopBanner>;
-}

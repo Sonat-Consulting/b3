@@ -10,7 +10,7 @@ import type { Asset, Entry, IFrameEntry } from '$lib/types/b3.contentful';
  */
 const contentfulRichTextOptions = (assets: Asset[], entries: Entry[]): Partial<Options> => ({
 	renderNode: {
-		[BLOCKS.PARAGRAPH]: (node, next) => `<p class="mb-6">${next(node.content)}</p>`,
+		[BLOCKS.PARAGRAPH]: (node, next) => `<p>${next(node.content)}</p>`,
 		[BLOCKS.UL_LIST]: (node, next) => `<ul class="list-disc ml-14">${next(node.content)}</ul>`,
 		[BLOCKS.OL_LIST]: (node, next) => `<ol class="list-decimal ml-14">${next(node.content)}</ol>`,
 		[BLOCKS.LIST_ITEM]: (node, next) => `<li>${next(node.content)}</li>`,

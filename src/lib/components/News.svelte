@@ -1,6 +1,6 @@
 <script lang="ts">
+	import type { Article } from '$lib/types/b3.contentful';
 	import ArticleLink from '$lib/components/ArticleLink.svelte';
-	import type { Article } from '$lib/types/b3';
 	export let articles: Article[];
 </script>
 

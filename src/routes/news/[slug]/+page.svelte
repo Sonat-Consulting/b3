@@ -11,9 +11,8 @@
 	$: articles = data?.articles;
 	$: menuItems = data?.menuItems;
 	$: articleBody = article?.body.json;
-	$: articleLinks = article?.body.links;
-	$: assets = articleLinks?.assets.block;
-	$: entries = articleLinks?.entries.block;
+	$: assets = article?.body.links?.assets.block;
+	$: entries = article?.body.links?.entries.block;
 </script>
 
 <svelte:head>

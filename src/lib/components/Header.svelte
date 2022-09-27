@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { MenuItem } from '$lib/types/b3';
+	import type { MenuItem } from '$lib/types/b3.contentful';
 
 	let isOpen = false;
 	export let menuItems: MenuItem[] = [];

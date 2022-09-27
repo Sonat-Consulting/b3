@@ -3,11 +3,11 @@ import { HomePageService } from '$lib/services/contentful/HomePageService';
 import { ArticleService } from '$lib/services/contentful/ArticleService';
 import { MenuService } from '$lib/services/contentful/MenuService';
 
-export async function load(): Promise<HomePageData> {
-	const homePageService = new HomePageService();
-	const articleService = new ArticleService();
-	const menuService = new MenuService();
+const homePageService = new HomePageService();
+const articleService = new ArticleService();
+const menuService = new MenuService();
 
+export async function load(): Promise<HomePageData> {
 	const [topBanner, articles, menuItems] = await Promise.all([
 		homePageService.getTopBanner(),
 		articleService.getArticles(),

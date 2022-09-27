@@ -20,7 +20,7 @@
 
 			{#if menuItems?.length > 0}
 				<div class="hidden lg:block">
-					{#each menuItems as menuItem}
+					{#each menuItems as menuItem (menuItem.url)}
 						<a
 							class="text-lg mr-12 last:mr-0 font-semibold rounded hover:underline"
 							target="_blank"
@@ -56,7 +56,7 @@
 		</div>
 
 		<div class="pt-2 pr-5 pb-5 flex flex-col items-end lg:hidden" class:hidden={!isOpen}>
-			{#each menuItems as menuItem}
+			{#each menuItems as menuItem (menuItem.url)}
 				<a
 					class="block text-lg mb-5 font-semibold rounded hover:underline"
 					target="_blank"

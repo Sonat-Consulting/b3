@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { BLOCKS } from '@contentful/rich-text-types';
 	import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
-	import News from '$lib/components/news.svelte';
-	import Header from '$lib/components/header.svelte';
-	import HorizontalPageDivider from '$lib/components/horizontalPageDivider.svelte';
+	import News from '$lib/components/News.svelte';
+	import Header from '$lib/components/Header.svelte';
+	import HorizontalPageDivider from '$lib/components/PageDivider.svelte';
 	import type { ArticlePageData } from '$lib/types/b3.pagedata';
 	import type { ArticleLinks, EntryBlock, IFrameEntry } from '$lib/types/b3';
 

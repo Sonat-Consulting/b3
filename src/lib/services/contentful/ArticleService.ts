@@ -5,7 +5,7 @@ import type { IArticleService } from '$lib/types/b3.services';
 import type { Article } from '$lib/types/b3';
 
 export class ArticleService implements IArticleService {
-	constructor(private readonly client: GraphQLClient) {}
+	constructor(private readonly _client: GraphQLClient = graphQLClient) {}
 
 	async getArticleById(id: string): Promise<Article> {
 		const query = gql`
@@ -65,7 +65,7 @@ export class ArticleService implements IArticleService {
 			}
 		`;
 
-		const response = await graphQLClient.request(query);
+		const response = await this._client.request(query);
 
 		return response.articles.items[0];
 	}
@@ -97,7 +97,7 @@ export class ArticleService implements IArticleService {
 			}
 		`;
 
-		const response = await graphQLClient.request(query);
+		const response = await this._client.request(query);
 
 		return response.articles.items;
 	}

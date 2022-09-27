@@ -10,7 +10,7 @@
 		EntryBlock,
 		IFrameEntry
 	} from '$lib/contentful/types/Article';
-	import type { ArticlePageData } from '../../../b3.pageData';
+	import type { ArticlePageData } from '$lib/types/b3.pagedata';
 
 	export let data: ArticlePageData;
 

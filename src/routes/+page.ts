@@ -1,5 +1,5 @@
-import type { IArticleService, IHomePageService, IMenuService } from '../b3';
-import type { HomePageData } from '../b3.pageData';
+import type { IArticleService, IHomePageService, IMenuService } from '$lib/types/b3';
+import type { HomePageData } from '$lib/types/b3.pagedata';
 import { HomePageService } from '$lib/services/contentful/HomePageService';
 import client from '$lib/infrastructure/contentful/graphQLClient';
 import { ArticleService } from '$lib/services/contentful/ArticleService';

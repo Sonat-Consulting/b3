@@ -4,21 +4,15 @@
 	import News from '$lib/news.svelte';
 	import Header from '$lib/header.svelte';
 	import HorizontalPageDivider from '$lib/horizontalPageDivider.svelte';
-	import type { MenuItem } from '$lib/contentful/types/MenuItemCollectionResponse';
 	import type {
 		Article,
 		ArticleLinks,
 		EntryBlock,
 		IFrameEntry
 	} from '$lib/contentful/types/Article';
+	import type { ArticlePageData } from '../../../b3.pageData';
 
-	type Props = {
-		article: Article;
-		articles: Article[];
-		menuItems: MenuItem[];
-	};
-
-	export let data: Props;
+	export let data: ArticlePageData;
 
 	const { article, articles, menuItems } = data;
 

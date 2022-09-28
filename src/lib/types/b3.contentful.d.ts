@@ -68,3 +68,9 @@ type MenuItem = {
 	url: string;
 	text: string;
 };
+
+type Video = {
+	id: number;
+	title?: string;
+	description?: string;
+};

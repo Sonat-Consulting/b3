@@ -4,6 +4,7 @@ type HomePageData = {
 	topBanner: TopBanner;
 	articles: Article[];
 	menuItems: MenuItem[];
+	videos: Video[];
 };
 
 type ArticlePageData = {

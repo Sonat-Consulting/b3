@@ -1,4 +1,4 @@
-import type { Article, MenuItem, TopBanner } from './b3';
+import type { Video, Article, MenuItem, TopBanner } from '$lib/types/b3.contentful';
 
 interface IMenuService {
 	getMenuItems(): Promise<MenuItem[]>;
@@ -11,4 +11,8 @@ interface IArticleService {
 
 interface IHomePageService {
 	getTopBanner(): Promise<TopBanner>;
+}
+
+interface IVideoService {
+	getFrontPageVideos(): Promise<Video[]>;
 }

@@ -15,7 +15,7 @@
 	<p class="mb-8 leading-relaxed">{article.ingress}</p>
 
 	<img
-		class="rounded-xl mb-8 w-full"
+		class="rounded-lg mb-8 w-full"
 		alt={article.articleHeroImage?.title}
 		src={`${article.articleHeroImage?.url}?fm=webp&w=720&h=480`}
 	/>

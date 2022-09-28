@@ -10,17 +10,17 @@ export class MenuService implements IMenuService {
 	async getMenuItems(): Promise<MenuItem[]> {
 		const query = gql`
 			query GetMenuItems {
-						menuItems: menuLinksCollection(preview: ${isPreviewMode}, limit: 10) {
-							items {
-								url
-								text
-							}
+					collection: menuLinksCollection(preview: ${isPreviewMode}, limit: 10) {
+						items {
+							url
+							text
 						}
 					}
+				}
 		`;
 
 		const response = await this._client.request(query);
 
-		return response.menuItems.items;
+		return response.collection.items;
 	}
 }

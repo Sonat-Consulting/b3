@@ -10,7 +10,7 @@ export class ArticleService implements IArticleService {
 	async getArticleById(id: string): Promise<Article> {
 		const query = gql`
 			query GetArticleBySlug {
-				articles: articleCollection(preview: ${isPreviewMode}, where: {slug: "${id}"}, limit: 1) {
+				collection: articleCollection(preview: ${isPreviewMode}, where: {slug: "${id}"}, limit: 1) {
 					items {
 						slug
 						title
@@ -68,7 +68,7 @@ export class ArticleService implements IArticleService {
 
 		const response = await this._client.request(query);
 
-		return response.articles.items[0];
+		return response.collection.items[0];
 	}
 
 	async getArticles(): Promise<Article[]> {

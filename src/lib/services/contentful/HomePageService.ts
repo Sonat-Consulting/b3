@@ -10,7 +10,7 @@ export class HomePageService implements IHomePageService {
 	async getTopBanner(): Promise<TopBanner> {
 		const query = gql`
 			query GetHomePages {
-				topBanners: homePageCollection(
+				collection: homePageCollection(
 					preview: ${isPreviewMode},
 					limit: 1,
 					where: {
@@ -37,6 +37,6 @@ export class HomePageService implements IHomePageService {
 
 		const response = await this._client.request(query);
 
-		return response.topBanners.items[0];
+		return response.collection.items[0];
 	}
 }

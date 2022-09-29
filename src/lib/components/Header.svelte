@@ -10,7 +10,7 @@
 		<div class="py-4 px-8 flex items-center justify-between">
 			<div class="flex items-center">
 				<a href="/" class="flex flex-row items-center">
-					<div class="flex flex-col text-right uppercase font-semibold">
+					<div class="flex flex-col text-right uppercase font-bold">
 						<span>World</span>
 						<span>Triathlon</span>
 						<span>Cup Bergen</span>

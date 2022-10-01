@@ -1,6 +1,5 @@
 <script lang="ts">
 	import ArticleLink from '$lib/components/ArticleLink.svelte';
-	import type { Article } from '$lib/types/b3.pagedata';
 	export let articles: Article[];
 </script>
 

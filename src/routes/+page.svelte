@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Header from '$lib/components/Header.svelte';
 	import News from '$lib/components/News.svelte';
-	import type { HomePageData } from '$lib/types/b3.pagedata';
 	import TopBanner from '$lib/components/TopBanner.svelte';
 	import Videos from '$lib/components/Videos.svelte';
 	import PageDivider from '$lib/components/PageDivider.svelte';

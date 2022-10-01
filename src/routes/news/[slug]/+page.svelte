@@ -1,5 +1,4 @@
 <script lang="ts">
-	import type { ArticlePageData } from '$lib/types/b3.pagedata';
 	import News from '$lib/components/News.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import HorizontalPageDivider from '$lib/components/PageDivider.svelte';
@@ -14,6 +13,10 @@
 
 <svelte:head>
 	<title>Bergen Triathlon Events | {article.title}</title>
+	<meta name="description" content={article.ingress} />
+	<meta property="og:title" content={article.title} />
+	<meta property="og:description" content={article.ingress} />
+	<meta property="og:image" content={article.image.url} />
 </svelte:head>
 
 <Header {menuItems} />

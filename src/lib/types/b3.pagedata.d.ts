@@ -1,5 +1,3 @@
-import type { ContentfulTopBanner } from '$lib/types/b3.contentful';
-
 type TopBanner = {
 	title: string;
 	subtitle: string;
@@ -39,7 +37,7 @@ type Article = {
 };
 
 type HomePageData = {
-	topBanner: ContentfulTopBanner;
+	topBanner: TopBanner;
 	articles: Article[];
 	menuItems: MenuItem[];
 	videos: Video[];

@@ -1,4 +1,3 @@
-import type { HomePageData } from '$lib/types/b3.pagedata';
 import { HomePageService } from '$lib/services/contentful/HomePageService';
 import { ArticleService } from '$lib/services/contentful/ArticleService';
 import { MenuService } from '$lib/services/contentful/MenuService';

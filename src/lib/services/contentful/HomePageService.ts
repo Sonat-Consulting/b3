@@ -1,13 +1,18 @@
 import type { GraphQLClient } from 'graphql-request';
 import { gql } from 'graphql-request';
 import type { IHomePageService } from '$lib/types/b3.services';
-import type { ContentfulTopBanner } from '$lib/types/b3.contentful';
+import type { TopBanner } from '$lib/types/b3.pagedata';
 import graphQLClient, { isPreviewMode } from '$lib/infrastructure/contentful/graphQLClient';
+import { TopBannerMapper } from '$lib/services/contentful/mappers/TopBannerMapper';
+import type { ContentfulTopBanner } from '$lib/types/b3.contentful';
 
 export class HomePageService implements IHomePageService {
-	constructor(private readonly _client: GraphQLClient = graphQLClient) {}
+	constructor(
+		private readonly _client: GraphQLClient = graphQLClient,
+		private readonly _mapper: TopBannerMapper = new TopBannerMapper()
+	) {}
 
-	async getTopBanner(): Promise<ContentfulTopBanner> {
+	async getTopBanner(): Promise<TopBanner> {
 		const query = gql`
 			query GetHomePages {
 				collection: homePageCollection(
@@ -36,7 +41,7 @@ export class HomePageService implements IHomePageService {
 		`;
 
 		const response = await this._client.request(query);
-
-		return response.collection.items[0];
+		const contentfulTopBanner = response.collection.items[0];
+		return this._mapper.mapContenfulTopBannerToInternal(contentfulTopBanner);
 	}
 }

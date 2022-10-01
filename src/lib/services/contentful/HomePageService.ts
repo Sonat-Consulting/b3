@@ -39,8 +39,13 @@ export class HomePageService implements IHomePageService {
 			}
 		`;
 
-		const response = await this._client.request(query);
-		const contentfulTopBanner = response.collection.items[0];
-		return this._mapper.mapContenfulTopBannerToInternal(contentfulTopBanner);
+		try {
+			const response = await this._client.request(query);
+			const contentfulTopBanner = response.collection.items[0];
+			return this._mapper.mapContenfulTopBannerToInternal(contentfulTopBanner);
+		} catch (e) {
+			console.error('failed to get home page from cms - returning empty');
+			return;
+		}
 	}
 }

@@ -102,8 +102,13 @@ export class ArticleService implements IArticleService {
 			}
 		`;
 
-		const response = await this._client.request(query);
-		const contentfulArticles = response.articles.items;
-		return contentfulArticles.map(this._mapper.mapContenfulArticleToInternal);
+		try {
+			const response = await this._client.request(query);
+			const contentfulArticles = response.articles.items;
+			return contentfulArticles.map(this._mapper.mapContenfulArticleToInternal);
+		} catch (e) {
+			console.error('failed to get articles from cms - returning empty');
+			return;
+		}
 	}
 }

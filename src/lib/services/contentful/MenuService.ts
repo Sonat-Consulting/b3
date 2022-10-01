@@ -23,8 +23,13 @@ export class MenuService implements IMenuService {
 				}
 		`;
 
-		const response = await this._client.request(query);
-		const contentfulMenuItems = response.collection.items;
-		return contentfulMenuItems.map(this._mapper.mapContenfulMenuItemToInternal);
+		try {
+			const response = await this._client.request(query);
+			const contentfulMenuItems = response.collection.items;
+			return contentfulMenuItems.map(this._mapper.mapContenfulMenuItemToInternal);
+		} catch (e) {
+			console.error('failed to get menu items from cms - returning empty');
+			return;
+		}
 	}
 }

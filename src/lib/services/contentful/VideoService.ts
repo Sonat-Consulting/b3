@@ -32,8 +32,13 @@ export class VideoService implements IVideoService {
 			}
 		`;
 
-		const response = await this._client.request(query);
-		const contentfulVideos = response.videoListCollection?.items[0]?.videosCollection.items;
-		return contentfulVideos.map(this._mapper.mapContenfulVideoToInternal);
+		try {
+			const response = await this._client.request(query);
+			const contentfulVideos = response.videoListCollection?.items[0]?.videosCollection.items;
+			return contentfulVideos.map(this._mapper.mapContenfulVideoToInternal);
+		} catch (e) {
+			console.error('failed to get front page videos from cms - returning empty');
+			return;
+		}
 	}
 }

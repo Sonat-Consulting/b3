@@ -17,7 +17,9 @@
 <Header {menuItems} />
 
 <main class="container flex flex-col mx-auto mt-20 mb-40">
-	<TopBanner {topBanner} />
+	{#if topBanner}
+		<TopBanner {topBanner} />
+	{/if}
 
 	{#if videos?.length > 0}
 		<PageDivider>Siste videoene fra Bergen Triathlon Events</PageDivider>

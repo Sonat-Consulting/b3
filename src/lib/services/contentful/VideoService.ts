@@ -1,13 +1,13 @@
 import type { GraphQLClient } from 'graphql-request';
 import type { IVideoService } from '$lib/types/b3.services';
-import type { Video } from '$lib/types/b3.contentful';
+import type { ContentfulVideo } from '$lib/types/b3.contentful';
 import graphQLClient, { isPreviewMode } from '$lib/infrastructure/contentful/graphQLClient';
 import { gql } from 'graphql-request';
 
 export class VideoService implements IVideoService {
 	constructor(private readonly _client: GraphQLClient = graphQLClient) {}
 
-	async getFrontPageVideos(): Promise<Video[]> {
+	async getFrontPageVideos(): Promise<ContentfulVideo[]> {
 		const query = gql`
 			query GetVideoList {
 				videoListCollection: videoListCollection(

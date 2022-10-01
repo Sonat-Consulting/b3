@@ -1,7 +1,13 @@
-import type { Video, Article, MenuItem, TopBanner } from '$lib/types/b3.contentful';
+import type {
+	ContentfulMenuItem,
+	ContentfulTopBanner,
+	ContentfulVideo
+} from '$lib/types/b3.contentful';
+
+import type { Article } from '$lib/types/b3.pagedata';
 
 interface IMenuService {
-	getMenuItems(): Promise<MenuItem[]>;
+	getMenuItems(): Promise<ContentfulMenuItem[]>;
 }
 
 interface IArticleService {
@@ -10,9 +16,9 @@ interface IArticleService {
 }
 
 interface IHomePageService {
-	getTopBanner(): Promise<TopBanner>;
+	getTopBanner(): Promise<ContentfulTopBanner>;
 }
 
 interface IVideoService {
-	getFrontPageVideos(): Promise<Video[]>;
+	getFrontPageVideos(): Promise<ContentfulVideo[]>;
 }

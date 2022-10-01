@@ -1,11 +1,15 @@
 import type { GraphQLClient } from 'graphql-request';
 import { gql } from 'graphql-request';
 import type { IArticleService } from '$lib/types/b3.services';
-import type { Article } from '$lib/types/b3.contentful';
 import graphQLClient, { isPreviewMode } from '$lib/infrastructure/contentful/graphQLClient';
+import type { Article } from '$lib/types/b3.pagedata';
+import { ArticleMapper } from '$lib/services/contentful/mappers/ArticleMapper';
 
 export class ArticleService implements IArticleService {
-	constructor(private readonly _client: GraphQLClient = graphQLClient) {}
+	constructor(
+		private readonly _client: GraphQLClient = graphQLClient,
+		private readonly _mapper: ArticleMapper = new ArticleMapper()
+	) {}
 
 	async getArticleById(id: string): Promise<Article> {
 		const query = gql`
@@ -67,8 +71,8 @@ export class ArticleService implements IArticleService {
 		`;
 
 		const response = await this._client.request(query);
-
-		return response.collection.items[0];
+		const contentfulArticle = response.collection.items[0];
+		return this._mapper.mapContenfulArticleToInternal(contentfulArticle);
 	}
 
 	async getArticles(): Promise<Article[]> {
@@ -99,7 +103,7 @@ export class ArticleService implements IArticleService {
 		`;
 
 		const response = await this._client.request(query);
-
-		return response.articles.items;
+		const contentfulArticles = response.articles.items;
+		return contentfulArticles.map(this._mapper.mapContenfulArticleToInternal);
 	}
 }

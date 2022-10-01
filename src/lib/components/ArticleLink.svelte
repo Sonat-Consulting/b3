@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { format, parseISO } from 'date-fns/index.js';
 	import { nb } from 'date-fns/locale/index.js';
-	import type { Article } from '$lib/types/b3.contentful';
+	import type { Article } from '$lib/types/b3.pagedata';
 
 	export let article: Article;
 
@@ -11,8 +11,8 @@
 <a href={`/news/${article.slug}`}>
 	<div class="relative">
 		<img
-			src={`${article.articleHeroImage?.url}?fm=webp&w=720&h=480`}
-			alt={article.articleHeroImage?.title}
+			src={article.image.url}
+			alt={article.image.title}
 			class="rounded-lg shadow-sm w-full object-cover"
 		/>
 		<div

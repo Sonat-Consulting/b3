@@ -1,6 +1,4 @@
 <script lang="ts">
-	import type { MenuItem } from '$lib/types/b3.pagedata';
-
 	let isOpen = false;
 	export let menuItems: MenuItem[] = [];
 </script>

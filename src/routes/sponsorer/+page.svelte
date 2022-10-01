@@ -1,7 +1,3 @@
-<script>
-	import Header from '$lib/components/Header.svelte';
-</script>
-
 <svelte:head>
 	<title>Bergen Triathlon Events | Bli sponsor</title>
 </svelte:head>

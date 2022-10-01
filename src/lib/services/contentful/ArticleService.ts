@@ -4,6 +4,7 @@ import type { IArticleService } from '$lib/types/b3.services';
 import client from '$lib/services/contentful/infrastructure/client';
 import { ArticleMapper } from '$lib/services/contentful/mappers/ArticleMapper';
 import { isPreviewMode } from '$lib/services/contentful/infrastructure/configuration';
+import type { ContentfulArticle } from '$lib/services/contentful/types/b3.contentful';
 
 export class ArticleService implements IArticleService {
 	constructor(
@@ -71,7 +72,7 @@ export class ArticleService implements IArticleService {
 		`;
 
 		const response = await this._client.request(query);
-		const contentfulArticle = response.collection.items[0];
+		const contentfulArticle: ContentfulArticle = response.collection.items[0];
 		return this._mapper.mapContenfulArticleToInternal(contentfulArticle);
 	}
 

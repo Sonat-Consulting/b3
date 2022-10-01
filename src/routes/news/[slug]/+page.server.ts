@@ -1,6 +1,5 @@
 import { ArticleService } from '$lib/services/contentful/ArticleService';
 import { MenuService } from '$lib/services/contentful/MenuService';
-import type { ArticlePageData } from '$lib/types/b3.pagedata';
 
 const articleService = new ArticleService();
 const menuService = new MenuService();

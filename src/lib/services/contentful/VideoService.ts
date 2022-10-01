@@ -1,13 +1,16 @@
 import type { GraphQLClient } from 'graphql-request';
-import type { IVideoService } from '$lib/types/b3.services';
-import type { ContentfulVideo } from '$lib/types/b3.contentful';
-import graphQLClient, { isPreviewMode } from '$lib/infrastructure/contentful/graphQLClient';
 import { gql } from 'graphql-request';
+import type { IVideoService } from '$lib/types/b3.services';
+import graphQLClient, { isPreviewMode } from '$lib/infrastructure/contentful/graphQLClient';
+import { VideoMapper } from '$lib/services/contentful/mappers/VideoMapper';
 
 export class VideoService implements IVideoService {
-	constructor(private readonly _client: GraphQLClient = graphQLClient) {}
+	constructor(
+		private readonly _client: GraphQLClient = graphQLClient,
+		private readonly _mapper: VideoMapper = new VideoMapper()
+	) {}
 
-	async getFrontPageVideos(): Promise<ContentfulVideo[]> {
+	async getFrontPageVideos(): Promise<Video[]> {
 		const query = gql`
 			query GetVideoList {
 				videoListCollection: videoListCollection(
@@ -29,6 +32,7 @@ export class VideoService implements IVideoService {
 		`;
 
 		const response = await this._client.request(query);
-		return response.videoListCollection?.items[0]?.videosCollection.items;
+		const contentfulVideos = response.videoListCollection?.items[0]?.videosCollection.items;
+		return contentfulVideos.map(this._mapper.mapContenfulVideoToInternal);
 	}
 }

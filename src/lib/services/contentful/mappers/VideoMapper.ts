@@ -1,4 +1,4 @@
-import type { ContentfulVideo } from '$lib/types/b3.contentful';
+import type { ContentfulVideo } from '$lib/services/contentful/types/b3.contentful';
 
 export class VideoMapper {
 	mapContenfulVideoToInternal(src: ContentfulVideo): Video {

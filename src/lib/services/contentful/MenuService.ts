@@ -1,13 +1,13 @@
 import type { GraphQLClient } from 'graphql-request';
 import { gql } from 'graphql-request';
 import type { IMenuService } from '$lib/types/b3.services';
-import type { MenuItem } from '$lib/types/b3.pagedata';
-import graphQLClient, { isPreviewMode } from '$lib/infrastructure/contentful/graphQLClient';
+import client from '$lib/services/contentful/infrastructure/client';
 import { MenuItemMapper } from '$lib/services/contentful/mappers/MenuItemMapper';
+import { isPreviewMode } from '$lib/services/contentful/infrastructure/configuration';
 
 export class MenuService implements IMenuService {
 	constructor(
-		private readonly _client: GraphQLClient = graphQLClient,
+		private readonly _client: GraphQLClient = client,
 		private readonly _mapper: MenuItemMapper = new MenuItemMapper()
 	) {}
 

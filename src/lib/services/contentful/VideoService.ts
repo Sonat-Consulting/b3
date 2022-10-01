@@ -1,12 +1,13 @@
 import type { GraphQLClient } from 'graphql-request';
 import { gql } from 'graphql-request';
 import type { IVideoService } from '$lib/types/b3.services';
-import graphQLClient, { isPreviewMode } from '$lib/infrastructure/contentful/graphQLClient';
+import client from '$lib/services/contentful/infrastructure/client';
 import { VideoMapper } from '$lib/services/contentful/mappers/VideoMapper';
+import { isPreviewMode } from '$lib/services/contentful/infrastructure/configuration';
 
 export class VideoService implements IVideoService {
 	constructor(
-		private readonly _client: GraphQLClient = graphQLClient,
+		private readonly _client: GraphQLClient = client,
 		private readonly _mapper: VideoMapper = new VideoMapper()
 	) {}
 

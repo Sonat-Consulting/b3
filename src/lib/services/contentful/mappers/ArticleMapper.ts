@@ -1,6 +1,5 @@
-import type { ContentfulArticle } from '$lib/types/b3.contentful';
-import type { ContentfulIFrameEntry } from '$lib/types/b3.contentful';
-import type { Article } from '$lib/types/b3.pagedata';
+import type { ContentfulArticle } from '$lib/services/contentful/types/b3.contentful';
+import type { ContentfulIFrameEntry } from '$lib/services/contentful/types/b3.contentful';
 import type { Options } from '@contentful/rich-text-html-renderer';
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';

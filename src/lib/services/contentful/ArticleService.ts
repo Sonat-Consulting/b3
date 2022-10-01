@@ -1,13 +1,13 @@
 import type { GraphQLClient } from 'graphql-request';
 import { gql } from 'graphql-request';
 import type { IArticleService } from '$lib/types/b3.services';
-import graphQLClient, { isPreviewMode } from '$lib/infrastructure/contentful/graphQLClient';
-import type { Article } from '$lib/types/b3.pagedata';
+import client from '$lib/services/contentful/infrastructure/client';
 import { ArticleMapper } from '$lib/services/contentful/mappers/ArticleMapper';
+import { isPreviewMode } from '$lib/services/contentful/infrastructure/configuration';
 
 export class ArticleService implements IArticleService {
 	constructor(
-		private readonly _client: GraphQLClient = graphQLClient,
+		private readonly _client: GraphQLClient = client,
 		private readonly _mapper: ArticleMapper = new ArticleMapper()
 	) {}
 

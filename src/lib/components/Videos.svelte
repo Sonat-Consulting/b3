@@ -1,6 +1,5 @@
 <script lang="ts">
-	import type { ContentfulVideo } from '$lib/types/b3.contentful';
-	export let videos: ContentfulVideo[] = [];
+	export let videos: Video[] = [];
 </script>
 
 <section class="grid grid-cols-1 md:grid-cols-2 gap-20 px-8 md:px-0">

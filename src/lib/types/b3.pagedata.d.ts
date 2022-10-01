@@ -1,4 +1,29 @@
-import type { ContentfulMenuItem, ContentfulTopBanner } from '$lib/types/b3.contentful';
+import type { ContentfulTopBanner } from '$lib/types/b3.contentful';
+
+type TopBanner = {
+	title: string;
+	subtitle: string;
+	image: {
+		url: string;
+		title: string;
+		description: string;
+	};
+	primaryLinkUrl: string;
+	primaryLinkText: string;
+	secondaryLinkUrl: string;
+	secondaryLinkText: string;
+};
+
+type MenuItem = {
+	url: string;
+	text: string;
+};
+
+type Video = {
+	id: number;
+	title?: string;
+	description?: string;
+};
 
 type Article = {
 	slug: string;
@@ -16,12 +41,12 @@ type Article = {
 type HomePageData = {
 	topBanner: ContentfulTopBanner;
 	articles: Article[];
-	menuItems: ContentfulMenuItem[];
+	menuItems: MenuItem[];
 	videos: Video[];
 };
 
 type ArticlePageData = {
 	article: Article;
 	articles: Article[];
-	menuItems: ContentfulMenuItem[];
+	menuItems: MenuItem[];
 };

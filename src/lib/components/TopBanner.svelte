@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { TopBanner } from '$lib/types/b3.contentful.js';
+	import type { ContentfulTopBanner } from '$lib/types/b3.contentful.js';
 	import Card from '$lib/components/Card.svelte';
 
-	export let topBanner: TopBanner;
+	export let topBanner: ContentfulTopBanner;
 </script>
 
 <Card>

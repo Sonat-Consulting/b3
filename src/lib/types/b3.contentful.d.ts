@@ -1,6 +1,6 @@
 import { Document } from '@contentful/rich-text-types';
 
-type Asset = {
+type ContentfulAsset = {
 	url: string;
 	title: string;
 	sys: {
@@ -8,20 +8,20 @@ type Asset = {
 	};
 };
 
-type Entry = {
+type ContentfulEntry = {
 	__typename: string;
 	sys: {
 		id: string;
 	};
 };
 
-type Article = {
+type ContentfulArticle = {
 	slug: string;
 	title: string;
 	ingress: string;
 	body: {
 		json: Document;
-		links: ArticleLinks;
+		links: ContentfulArticleLinks;
 	};
 	articleHeroImage: {
 		title: string;
@@ -33,24 +33,24 @@ type Article = {
 	date: string;
 };
 
-type ArticleLinks = {
+type ContentfulArticleLinks = {
 	assets: {
-		block: Asset[];
+		block: ContentfulAsset[];
 	};
 	entries: {
 		inline: any[];
-		block: Entry[];
+		block: ContentfulEntry[];
 	};
 };
 
-type IFrameEntry = Entry & {
+type ContentfulIFrameEntry = ContentfulEntry & {
 	title: string;
 	url: string;
 	width: string;
 	height: string;
 };
 
-type TopBanner = {
+type ContentfulTopBanner = {
 	topBannerTitle: string;
 	topBannerSubtitle: string;
 	topBannerImage: {
@@ -64,12 +64,12 @@ type TopBanner = {
 	secondaryLinkText: string | null;
 };
 
-type MenuItem = {
+type ContentfulMenuItem = {
 	url: string;
 	text: string;
 };
 
-type Video = {
+type ContentfulVideo = {
 	id: number;
 	title?: string;
 	description?: string;

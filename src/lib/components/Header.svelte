@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { MenuItem } from '$lib/types/b3.contentful';
+	import type { ContentfulMenuItem } from '$lib/types/b3.contentful';
 
 	let isOpen = false;
-	export let menuItems: MenuItem[] = [];
+	export let menuItems: ContentfulMenuItem[] = [];
 </script>
 
 <header class="bg-gray-100 border-b-2 border-gray-200">

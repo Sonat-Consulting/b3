@@ -21,41 +21,45 @@ export class ArticleMapper {
 	}
 }
 
+const {
+	PARAGRAPH,
+	UL_LIST,
+	OL_LIST,
+	LIST_ITEM,
+	HEADING_1,
+	HEADING_2,
+	HEADING_3,
+	HEADING_4,
+	EMBEDDED_ASSET,
+	EMBEDDED_ENTRY
+} = BLOCKS;
+
 const parseRichTextOptions = ({
 	body: {
 		links: { assets, entries }
 	}
-}: ContentfulArticle): Partial<Options> => {
-	return {
-		renderNode: {
-			[BLOCKS.PARAGRAPH]: (node, next) => `<p>${next(node.content)}</p>`,
-			[BLOCKS.UL_LIST]: (node, next) => `<ul class="list-disc ml-14">${next(node.content)}</ul>`,
-			[BLOCKS.OL_LIST]: (node, next) => `<ol class="list-decimal ml-14">${next(node.content)}</ol>`,
-			[BLOCKS.LIST_ITEM]: (node, next) => `<li>${next(node.content)}</li>`,
-			[BLOCKS.HEADING_1]: (node, next) => `<h1 class="text-4xl">${next(node.content)}</h1>`,
-			[BLOCKS.HEADING_2]: (node, next) => `<h2 class="text-3xl">${next(node.content)}</h2>`,
-			[BLOCKS.HEADING_3]: (node, next) => `<h3 class="text-2xl">${next(node.content)}</h3>`,
-			[BLOCKS.HEADING_4]: (node, next) => `<h4 class="text-xl">${next(node.content)}</h4>`,
-			[BLOCKS.EMBEDDED_ASSET]: (node, next) => {
-				const asset = assets?.block?.find((asset) => asset.sys.id === node.data.target.sys.id);
-				if (asset) {
-					return `<img src=${asset.url} alt="${asset.title}" />`;
-				}
-			},
-			[BLOCKS.EMBEDDED_ENTRY]: (node, next) => {
-				const entry = entries?.block?.find((entry) => entry.sys.id === node.data.target.sys.id);
-				if (entry?.__typename === 'IFrame') {
-					const iframeEntry = entry as ContentfulIFrameEntry;
-					return `
-								<iframe
-										src="${iframeEntry.url}"
-										height="${iframeEntry.height}"
-										width="${iframeEntry.width}"
-										title="${iframeEntry.title}"
-								></iframe>
-						`;
-				}
+}: ContentfulArticle): Partial<Options> => ({
+	renderNode: {
+		[PARAGRAPH]: ({ content }, next) => `<p>${next(content)}</p>`,
+		[UL_LIST]: ({ content }, next) => `<ul class="list-disc ml-14">${next(content)}</ul>`,
+		[OL_LIST]: ({ content }, next) => `<ol class="list-decimal ml-14">${next(content)}</ol>`,
+		[LIST_ITEM]: ({ content }, next) => `<li>${next(content)}</li>`,
+		[HEADING_1]: ({ content }, next) => `<h1 class="text-4xl">${next(content)}</h1>`,
+		[HEADING_2]: ({ content }, next) => `<h2 class="text-3xl">${next(content)}</h2>`,
+		[HEADING_3]: ({ content }, next) => `<h3 class="text-2xl">${next(content)}</h3>`,
+		[HEADING_4]: ({ content }, next) => `<h4 class="text-xl">${next(content)}</h4>`,
+		[EMBEDDED_ASSET]: ({ data }) => {
+			const asset = assets?.block?.find((asset) => asset.sys.id === data.target.sys.id);
+			if (asset) {
+				return `<img src=${asset.url} alt="${asset.title}" />`;
+			}
+		},
+		[EMBEDDED_ENTRY]: ({ data }) => {
+			const entry = entries?.block?.find((entry) => entry.sys.id === data.target.sys.id);
+			if (entry?.__typename === 'IFrame') {
+				const iframe = entry as ContentfulIFrameEntry;
+				return `<iframe src="${iframe.url}" height="${iframe.height}" width="${iframe.width}" title="${iframe.title}"></iframe>`;
 			}
 		}
-	};
-};
+	}
+});

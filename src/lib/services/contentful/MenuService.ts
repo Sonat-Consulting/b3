@@ -1,6 +1,6 @@
 import type { GraphQLClient } from 'graphql-request';
 import { gql } from 'graphql-request';
-import type { IMenuService } from '$lib/types/b3.services';
+import type { IMenuService } from '$lib/services';
 import client from '$lib/services/contentful/infrastructure/client';
 import { MenuItemMapper } from '$lib/services/contentful/mappers/MenuItemMapper';
 import { isPreviewMode } from '$lib/services/contentful/infrastructure/configuration';

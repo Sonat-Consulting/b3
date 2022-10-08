@@ -17,8 +17,13 @@ VITE_CONTENTFUL_DELIVERY_API_ACCESS_TOKEN=Fetch-Token-From-Contentful-backend
 VITE_CONTENTFUL_SPACE_ID={space-id}
 ```
 
-2. Run `npm install`
-3. Run `npm run dev` to run the development server
+2. Add secrets for accessing Vimeo API
+```
+VITE_VIMEO_ACCESS_TOKEN={access token}
+```
+
+3. Run `npm install`
+4. Run `npm run dev` to run the development server
 
 ## GraphQL Explorer
 Visit https://graphql.contentful.com/content/v1/spaces/{SPACE}/explore?access_token={CDA_TOKEN} to test queries agains Contentful graph api.

@@ -1,4 +1,4 @@
-import type { ContentfulMenuItem } from '$lib/services/contentful/types/b3.contentful';
+import type { ContentfulMenuItem } from '$lib/services/contentful/types';
 
 export class MenuItemMapper {
 	mapContenfulMenuItemToInternal(src: ContentfulMenuItem): MenuItem {

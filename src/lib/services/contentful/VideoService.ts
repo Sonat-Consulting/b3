@@ -1,6 +1,6 @@
 import type { GraphQLClient } from 'graphql-request';
 import { gql } from 'graphql-request';
-import type { IVideoService } from '$lib/types/b3.services';
+import type { IVideoService } from '$lib/services';
 import client from '$lib/services/contentful/infrastructure/client';
 import { VideoMapper } from '$lib/services/contentful/mappers/VideoMapper';
 import { isPreviewMode } from '$lib/services/contentful/infrastructure/configuration';

@@ -1,6 +1,6 @@
 import type { GraphQLClient } from 'graphql-request';
 import { gql } from 'graphql-request';
-import type { IHomePageService } from '$lib/types/b3.services';
+import type { IHomePageService } from '$lib/services';
 import client from '$lib/services/contentful/infrastructure/client';
 import { TopBannerMapper } from '$lib/services/contentful/mappers/TopBannerMapper';
 import { isPreviewMode } from '$lib/services/contentful/infrastructure/configuration';

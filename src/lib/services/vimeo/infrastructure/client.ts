@@ -1,12 +1,17 @@
 import { accessToken } from '$lib/services/vimeo/infrastructure/configuration';
 
-class VimeoClient implements IVimeoClient {
-	constructor(private readonly accessToken) {}
+export interface IVimeoClient {
+	get<T>(path: string): Promise<T>;
+}
+
+export class VimeoClient implements IVimeoClient {
+	private readonly baseUrl: string = 'https://api.vimeo.com';
+	private readonly token: string = accessToken;
 
 	public async get<T>(path: string): Promise<T> {
-		const response = await fetch(`https://api.vimeo.com${path}`, {
+		const response = await fetch(this.baseUrl + path, {
 			headers: {
-				Authorization: `Bearer ${this.accessToken}`
+				Authorization: `Bearer ${this.token}`
 			}
 		});
 
@@ -15,7 +20,3 @@ class VimeoClient implements IVimeoClient {
 		return body as T;
 	}
 }
-
-const client = new VimeoClient(accessToken);
-
-export default client;

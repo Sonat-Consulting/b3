@@ -1,4 +1,4 @@
-import type { ContentfulTopBanner } from '$lib/services/contentful/types/b3.contentful';
+import type { ContentfulTopBanner } from '$lib/services/contentful/types';
 
 export class TopBannerMapper {
 	mapContenfulTopBannerToInternal(src: ContentfulTopBanner): TopBanner {

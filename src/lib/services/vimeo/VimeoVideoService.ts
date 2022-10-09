@@ -15,8 +15,8 @@ export class VimeoVideoService implements IVideoMetadataService {
 		const { pictures, play } = await this.client.get<VimeoVideoMetadata>(`/videos/${id}`);
 		return {
 			id,
-			poster: pictures.sizes.find(({ width }) => width === 640)?.link,
-			sources: play.progressive.map(({ link, type }) => ({ uri: link, type: type }))
+			poster: pictures?.sizes.find(({ width }) => width === 640)?.link,
+			sources: play?.progressive.map(({ link, type }) => ({ uri: link, type: type }))
 		};
 	}
 }

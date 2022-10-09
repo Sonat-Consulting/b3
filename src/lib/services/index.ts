@@ -16,3 +16,5 @@ export interface IHomePageService {
 export interface IVideoService {
 	getFrontPageVideos(): Promise<Video[]>;
 }
+
+export { VideoService } from './VideoService';

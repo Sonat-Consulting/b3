@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { TopBanner } from '$lib/types';
+	import type { TopBanner } from '$lib/types/viewmodels';
 	import Card from '$lib/components/Card.svelte';
 
 	export let topBanner: TopBanner;

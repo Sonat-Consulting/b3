@@ -1,5 +1,5 @@
 import type { IVideoService } from '$lib/services/index';
-import type { Video } from '$lib/types';
+import type { Video } from '$lib/types/viewmodels';
 import { ContentfulVideoService } from '$lib/services/contentful';
 
 export class VideoService implements IVideoService {

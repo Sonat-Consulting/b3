@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Article } from '$lib/types';
+	import type { Article } from '$lib/types/viewmodels';
 	import ArticleLink from '$lib/components/ArticleLink.svelte';
 	export let articles: Article[];
 </script>

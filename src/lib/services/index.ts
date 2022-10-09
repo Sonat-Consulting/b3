@@ -1,4 +1,5 @@
-import type { Article, MenuItem, TopBanner, Video } from '$lib/types';
+import type { Article, MenuItem, TopBanner, Video } from '$lib/types/viewmodels';
+import type { VideoMetadata } from '$lib/types/servicemodels';
 
 export interface IMenuService {
 	getMenuItems(): Promise<MenuItem[]>;
@@ -15,6 +16,10 @@ export interface IHomePageService {
 
 export interface IVideoService {
 	getFrontPageVideos(): Promise<Video[]>;
+}
+
+export interface IVideoMetadataService {
+	getVideoMetadata(id: number): Promise<VideoMetadata>;
 }
 
 export { VideoService } from './VideoService';

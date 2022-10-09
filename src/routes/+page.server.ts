@@ -1,4 +1,4 @@
-import type { HomePageData } from '$lib/types';
+import type { HomePageData } from '$lib/types/pagedata';
 import { VideoService } from '$lib/services';
 import {
 	ContentfulHomePageService,

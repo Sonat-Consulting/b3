@@ -4,7 +4,7 @@ import type { IMenuService } from '$lib/services';
 import client from '$lib/services/contentful/infrastructure/client';
 import { MenuItemMapper } from '$lib/services/contentful/mappers/MenuItemMapper';
 import { isPreviewMode } from '$lib/services/contentful/infrastructure/configuration';
-import type { MenuItem } from '$lib/types';
+import type { MenuItem } from '$lib/types/viewmodels';
 
 export class ContentfulMenuService implements IMenuService {
 	constructor(

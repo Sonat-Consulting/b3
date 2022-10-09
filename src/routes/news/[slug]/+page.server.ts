@@ -1,5 +1,5 @@
 import { ContentfulArticleService, ContentfulMenuService } from '$lib/services/contentful';
-import type { ArticlePageData } from '$lib/types';
+import type { ArticlePageData } from '$lib/types/pagedata';
 
 const articleService = new ContentfulArticleService();
 const menuService = new ContentfulMenuService();

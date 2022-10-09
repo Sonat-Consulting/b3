@@ -12,11 +12,11 @@ export class VimeoVideoService implements IVideoMetadataService {
 	}
 
 	async getVideoMetadata(id: number): Promise<VideoMetadata> {
-		const { pictures, files } = await this.client.get<VimeoVideoMetadata>(`/videos/${id}`);
+		const { pictures, play } = await this.client.get<VimeoVideoMetadata>(`/videos/${id}`);
 		return {
 			id,
 			poster: pictures.sizes.find(({ width }) => width === 640)?.link,
-			src: files.find(({ quality }) => quality === 'hls')?.link
+			sources: play.progressive.map(({ link, type }) => ({ uri: link, type: type }))
 		};
 	}
 }

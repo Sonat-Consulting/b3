@@ -1,4 +1,4 @@
-import type { Video, MenuItem, TopBanner, Article } from '$lib/types';
+import type { Video, MenuItem, TopBanner, Article } from '$lib/types/viewmodels';
 
 export type HomePageData = {
 	topBanner: TopBanner;

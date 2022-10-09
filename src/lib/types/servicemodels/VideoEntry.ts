@@ -1,7 +1,5 @@
-export type Video = {
+export type VideoEntry = {
 	id: number;
 	title: string;
 	description: string;
-	poster: string;
-	src: string;
 };

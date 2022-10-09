@@ -15,9 +15,9 @@ export class VideoService implements IVideoService {
 	async getFrontPageVideos(): Promise<Video[]> {
 		const videoEntries = await this.contentfulVideoService.getVideoEntries();
 
-		const promises = videoEntries.map(async (video) => {
-			const { src, poster } = await this.vimeoVideoService.getVideoMetadata(video.id);
-			return { ...video, src, poster };
+		const promises = videoEntries.map(async ({ id, title, description }) => {
+			const { sources, poster } = await this.vimeoVideoService.getVideoMetadata(id);
+			return { id, title, description, poster, sources };
 		});
 
 		return await Promise.all(promises);

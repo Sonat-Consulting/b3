@@ -1,17 +1,18 @@
 export type VimeoVideoMetadata = {
 	pictures: VimeoVideoPictures;
-	files: VimeoVideoFile[];
+	play: VimeoVideoPlay;
+};
+
+type VimeoVideoPlay = {
+	progressive: VimeoVideoFile[];
 };
 
 type VimeoVideoFile = {
 	type: string;
 	width: number;
 	height: number;
-	quality: VimeoVideoFileQuality;
 	link: string;
 };
-
-type VimeoVideoFileQuality = 'sd' | 'uhd' | 'hd' | 'hls';
 
 type VimeoVideoPictures = {
 	active: boolean;

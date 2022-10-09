@@ -1,18 +1,14 @@
 import type { GraphQLClient } from 'graphql-request';
 import { gql } from 'graphql-request';
-import type { IVideoService } from '$lib/services';
+import type { IVideoEntryService } from '$lib/services';
 import client from '$lib/services/contentful/infrastructure/client';
-import { VideoMapper } from '$lib/services/contentful/mappers/VideoMapper';
 import { isPreviewMode } from '$lib/services/contentful/infrastructure/configuration';
-import type { Video } from '$lib/types/viewmodels';
+import type { VideoEntry } from '$lib/types/servicemodels';
 
-export class ContentfulVideoService implements IVideoService {
-	constructor(
-		private readonly _client: GraphQLClient = client,
-		private readonly _mapper: VideoMapper = new VideoMapper()
-	) {}
+export class ContentfulVideoService implements IVideoEntryService {
+	constructor(private readonly _client: GraphQLClient = client) {}
 
-	async getFrontPageVideos(): Promise<Video[]> {
+	async getVideoEntries(): Promise<VideoEntry[]> {
 		const query = gql`
 			query GetVideoList {
 				videoListCollection: videoListCollection(
@@ -35,8 +31,7 @@ export class ContentfulVideoService implements IVideoService {
 
 		try {
 			const response = await this._client.request(query);
-			const contentfulVideos = response.videoListCollection?.items[0]?.videosCollection.items;
-			return contentfulVideos.map(this._mapper.mapContenfulVideoToInternal);
+			return response.videoListCollection?.items[0]?.videosCollection.items;
 		} catch (e) {
 			console.error('failed to get front page videos from cms - returning empty');
 			return;

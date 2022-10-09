@@ -31,10 +31,11 @@ export class ContentfulVideoService implements IVideoEntryService {
 
 		try {
 			const response = await this._client.request(query);
-			return response.videoListCollection?.items[0]?.videosCollection.items;
+			const videoEntries = response.videoListCollection?.items[0]?.videosCollection.items;
+			return videoEntries || [];
 		} catch (e) {
 			console.error('failed to get front page videos from cms - returning empty');
-			return;
+			return [];
 		}
 	}
 }

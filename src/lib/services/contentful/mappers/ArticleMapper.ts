@@ -2,6 +2,7 @@ import type { Options } from '@contentful/rich-text-html-renderer';
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 import type { ContentfulArticle, ContentfulIFrameEntry } from '$lib/services/contentful/types';
+import type { Article } from '$lib/types';
 
 export class ArticleMapper {
 	mapContenfulArticleToInternal(src: ContentfulArticle): Article {

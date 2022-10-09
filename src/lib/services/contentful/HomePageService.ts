@@ -4,6 +4,7 @@ import type { IHomePageService } from '$lib/services';
 import client from '$lib/services/contentful/infrastructure/client';
 import { TopBannerMapper } from '$lib/services/contentful/mappers/TopBannerMapper';
 import { isPreviewMode } from '$lib/services/contentful/infrastructure/configuration';
+import type { TopBanner } from '$lib/types';
 
 export class HomePageService implements IHomePageService {
 	constructor(

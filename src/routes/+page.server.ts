@@ -2,6 +2,7 @@ import { HomePageService } from '$lib/services/contentful/HomePageService';
 import { ArticleService } from '$lib/services/contentful/ArticleService';
 import { MenuService } from '$lib/services/contentful/MenuService';
 import { VideoService } from '$lib/services/contentful/VideoService';
+import type { HomePageData } from '$lib/types';
 
 const homePageService = new HomePageService();
 const articleService = new ArticleService();

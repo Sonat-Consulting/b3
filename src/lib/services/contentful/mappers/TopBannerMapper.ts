@@ -1,4 +1,5 @@
 import type { ContentfulTopBanner } from '$lib/services/contentful/types';
+import type { TopBanner } from '$lib/types';
 
 export class TopBannerMapper {
 	mapContenfulTopBannerToInternal(src: ContentfulTopBanner): TopBanner {

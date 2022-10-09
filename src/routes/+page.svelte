@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { HomePageData } from '$lib/types';
 	import Header from '$lib/components/Header.svelte';
 	import News from '$lib/components/News.svelte';
 	import TopBanner from '$lib/components/TopBanner.svelte';

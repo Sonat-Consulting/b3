@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { format, parseISO } from 'date-fns/index.js';
 	import { nb } from 'date-fns/locale/index.js';
+	import type { Article } from '$lib/types';
 
 	export let article: Article;
 

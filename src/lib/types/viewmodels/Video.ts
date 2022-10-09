@@ -3,5 +3,5 @@ export type Video = {
 	title: string;
 	description: string;
 	poster: string;
-	src: string;
+	sources: { uri: string; type: string }[];
 };

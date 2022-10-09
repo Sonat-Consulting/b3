@@ -1,5 +1,5 @@
 export type VideoMetadata = {
 	id: number;
-	src: string;
 	poster: string;
+	sources: { uri: string; type: string }[];
 };

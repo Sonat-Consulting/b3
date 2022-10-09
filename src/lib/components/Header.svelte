@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { MenuItem } from '$lib/types';
+	import type { MenuItem } from '$lib/types/viewmodels';
 
 	let isOpen = false;
 	export let menuItems: MenuItem[] = [];

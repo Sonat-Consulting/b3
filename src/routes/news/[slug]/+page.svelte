@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ArticlePageData } from '$lib/types';
+	import type { ArticlePageData } from '$lib/types/pagedata';
 	import News from '$lib/components/News.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import HorizontalPageDivider from '$lib/components/PageDivider.svelte';

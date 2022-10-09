@@ -6,7 +6,7 @@ import { VideoMapper } from '$lib/services/contentful/mappers/VideoMapper';
 import { isPreviewMode } from '$lib/services/contentful/infrastructure/configuration';
 import type { Video } from '$lib/types';
 
-export class VideoService implements IVideoService {
+export class ContentfulVideoService implements IVideoService {
 	constructor(
 		private readonly _client: GraphQLClient = client,
 		private readonly _mapper: VideoMapper = new VideoMapper()

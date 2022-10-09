@@ -1,9 +1,8 @@
-import { ArticleService } from '$lib/services/contentful/ArticleService';
-import { MenuService } from '$lib/services/contentful/MenuService';
+import { ContentfulArticleService, ContentfulMenuService } from '$lib/services/contentful';
 import type { ArticlePageData } from '$lib/types';
 
-const articleService = new ArticleService();
-const menuService = new MenuService();
+const articleService = new ContentfulArticleService();
+const menuService = new ContentfulMenuService();
 
 export async function load({ params }): Promise<ArticlePageData> {
 	const [article, articles, menuItems] = await Promise.all([

@@ -1,13 +1,15 @@
-import { HomePageService } from '$lib/services/contentful/HomePageService';
-import { ArticleService } from '$lib/services/contentful/ArticleService';
-import { MenuService } from '$lib/services/contentful/MenuService';
-import { VideoService } from '$lib/services/contentful/VideoService';
 import type { HomePageData } from '$lib/types';
+import {
+	ContentfulHomePageService,
+	ContentfulArticleService,
+	ContentfulMenuService,
+	ContentfulVideoService
+} from '$lib/services/contentful';
 
-const homePageService = new HomePageService();
-const articleService = new ArticleService();
-const menuService = new MenuService();
-const videoService = new VideoService();
+const homePageService = new ContentfulHomePageService();
+const articleService = new ContentfulArticleService();
+const menuService = new ContentfulMenuService();
+const videoService = new ContentfulVideoService();
 
 export async function load(): Promise<HomePageData> {
 	const [topBanner, articles, menuItems, videos] = await Promise.all([

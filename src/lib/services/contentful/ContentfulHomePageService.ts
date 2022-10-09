@@ -6,7 +6,7 @@ import { TopBannerMapper } from '$lib/services/contentful/mappers/TopBannerMappe
 import { isPreviewMode } from '$lib/services/contentful/infrastructure/configuration';
 import type { TopBanner } from '$lib/types';
 
-export class HomePageService implements IHomePageService {
+export class ContentfulHomePageService implements IHomePageService {
 	constructor(
 		private readonly _client: GraphQLClient = client,
 		private readonly _mapper: TopBannerMapper = new TopBannerMapper()

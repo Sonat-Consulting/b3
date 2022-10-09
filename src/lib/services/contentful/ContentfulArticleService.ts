@@ -7,7 +7,7 @@ import { isPreviewMode } from '$lib/services/contentful/infrastructure/configura
 import type { ContentfulArticle } from '$lib/services/contentful/types';
 import type { Article } from '$lib/types';
 
-export class ArticleService implements IArticleService {
+export class ContentfulArticleService implements IArticleService {
 	constructor(
 		private readonly _client: GraphQLClient = client,
 		private readonly _mapper: ArticleMapper = new ArticleMapper()

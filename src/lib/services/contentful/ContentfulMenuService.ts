@@ -6,7 +6,7 @@ import { MenuItemMapper } from '$lib/services/contentful/mappers/MenuItemMapper'
 import { isPreviewMode } from '$lib/services/contentful/infrastructure/configuration';
 import type { MenuItem } from '$lib/types';
 
-export class MenuService implements IMenuService {
+export class ContentfulMenuService implements IMenuService {
 	constructor(
 		private readonly _client: GraphQLClient = client,
 		private readonly _mapper: MenuItemMapper = new MenuItemMapper()

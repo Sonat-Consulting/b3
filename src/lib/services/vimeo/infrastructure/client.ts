@@ -9,11 +9,16 @@ export class VimeoClient implements IVimeoClient {
 	private readonly token: string = accessToken;
 
 	public async get<T>(path: string): Promise<T> {
-		const response = await fetch(this.baseUrl + path, {
+		const uri = this.baseUrl + path;
+		const response = await fetch(uri, {
 			headers: {
 				Authorization: `Bearer ${this.token}`
 			}
 		});
+
+		if (!response.ok) {
+			throw new Error(`vimeo api returned status ${response.status} for uri ${uri}`);
+		}
 
 		const body = await response.json();
 

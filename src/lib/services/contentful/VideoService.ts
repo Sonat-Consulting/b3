@@ -4,6 +4,7 @@ import type { IVideoService } from '$lib/services';
 import client from '$lib/services/contentful/infrastructure/client';
 import { VideoMapper } from '$lib/services/contentful/mappers/VideoMapper';
 import { isPreviewMode } from '$lib/services/contentful/infrastructure/configuration';
+import type { Video } from '$lib/types';
 
 export class VideoService implements IVideoService {
 	constructor(

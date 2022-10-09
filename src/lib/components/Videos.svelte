@@ -1,4 +1,6 @@
 <script lang="ts">
+	import type { Video } from '$lib/types';
+
 	export let videos: Video[] = [];
 </script>
 

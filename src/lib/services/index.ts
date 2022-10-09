@@ -1,3 +1,5 @@
+import type { Article, MenuItem, TopBanner, Video } from '$lib/types';
+
 export interface IMenuService {
 	getMenuItems(): Promise<MenuItem[]>;
 }

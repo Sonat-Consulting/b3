@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { Article } from '$lib/types';
 	import ArticleLink from '$lib/components/ArticleLink.svelte';
 	export let articles: Article[];
 </script>

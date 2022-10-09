@@ -3,4 +3,5 @@
  * components / view layer
  */
 
+export type { VideoEntry } from './VideoEntry';
 export type { VideoMetadata } from './VideoMetadata';

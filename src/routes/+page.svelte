@@ -16,7 +16,7 @@
 
 <Header {menuItems} />
 
-<main class="container flex flex-col mx-auto mt-20 mb-40">
+<main class="container flex flex-col mx-auto mt-10 mb-20 md:mt-20 md:mb-40">
 	{#if topBanner}
 		<TopBanner {topBanner} />
 	{/if}

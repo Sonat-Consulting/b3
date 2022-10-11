@@ -1,6 +1,7 @@
 export type VimeoVideoMetadata = {
 	pictures: VimeoVideoPictures;
 	play: VimeoVideoPlay;
+	files: VimeoVideoFile[];
 };
 
 type VimeoVideoPlay = {

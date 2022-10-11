@@ -1,24 +1,17 @@
 <script lang="ts">
-	import type { Video } from '$lib/types/viewmodels';
+	import type { Video as VideoViewModel } from '$lib/types/viewmodels';
+	import Video from '$lib/components/Video.svelte';
 
-	export let videos: Video[] = [];
+	export let videos: VideoViewModel[] = [];
 </script>
 
 <section class="grid grid-cols-1 md:grid-cols-2 gap-20 px-8 md:px-0">
 	{#each videos as video (video.id)}
 		<div>
 			<div style="padding:56.25% 0 0 0" class="relative">
-				<video
-					src={video.src}
-					poster={video.poster}
-					type={video.type}
-					controls
-					class="absolute top-0 left-0 w-full h-full rounded-lg"
-				>
-					{#each video.sources as source (source.uri)}
-						<source src={source.uri} type={source.type} />
-					{/each}
-				</video>
+				<div class="absolute top-0 left-0 w-full h-full">
+					<Video {video} />
+				</div>
 			</div>
 			{#if video.title && video.description}
 				<h2 class="mt-6 mb-4 text-xl font-semibold">{video.title}</h2>

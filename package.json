@@ -39,6 +39,7 @@
 	"dependencies": {
 		"@contentful/rich-text-html-renderer": "^15.13.1",
 		"@contentful/rich-text-types": "^15.13.2",
-		"date-fns": "^2.29.3"
+		"date-fns": "^2.29.3",
+		"video.js": "^7.20.3"
 	}
 }

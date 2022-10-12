@@ -5,6 +5,7 @@
 	import TopBanner from '$lib/components/TopBanner.svelte';
 	import Videos from '$lib/components/Videos.svelte';
 	import PageDivider from '$lib/components/PageDivider.svelte';
+	import Alert from '$lib/components/Alert.svelte';
 
 	export let data: HomePageData;
 	const { topBanner, menuItems, articles, videos } = data;
@@ -16,7 +17,7 @@
 
 <Header {menuItems} />
 
-<main class="container flex flex-col mx-auto mt-20 mb-40">
+<main class="container flex flex-col mx-auto my-20">
 	{#if topBanner}
 		<TopBanner {topBanner} />
 	{/if}
@@ -30,4 +31,21 @@
 		<PageDivider>Siste nyheter fra Bergen Triathlon Events</PageDivider>
 		<News {articles} />
 	{/if}
+
+	<section class="px-8 md:px-0 mt-10 md:mt-20">
+		<Alert type="info" title="Bli med å bidra">
+			Etableringen av det største årlige internasjonale arrangementet i Bergen på TV og nett er
+			krevende. De frivillige er stammen i arbeidet vårt. Det offentlige med Bergen kommune,
+			Vestland fylke og Staten bidrar sammen med våre sponsorer til å gjøre arrangementet mulig
+			økonomisk. Bergen Triathlon Events, heleid av de to klubbene Åsane Cykle Klubb og Bergen
+			Triathlon Club, har vist at vi kan skape et godt arrangement for alle. Slik at vi sammen lar
+			Bergen fremstå på beste måte med tusenvis av entusiastiske publikummere rundt løypen. Det er
+			ingen velfylt konto eller stor avkastning, men akkurat nok til at vi kan fortsette med noe som
+			byen, innbyggerne og idrettsutøverne våre fortjener. Derfor er alle bidrag viktige; fra alle
+			som har mulighet til å bidra personlig eller som selskap. Vi har en unik synlighet for
+			markedsføring eller markering av støtte til barn, voksne og funksjonshemmede. Og ikke minst –
+			et arrangement der de som kanskje er Bergens beste idrettsutøvere gjennom historien kan ta med
+			seg verdenseliten hjem til fest.
+		</Alert>
+	</section>
 </main>

@@ -22,7 +22,7 @@
 
 <Header {menuItems} />
 
-<main class="container flex flex-col mx-auto article mt-20 mb-40">
+<main class="container flex flex-col mx-auto article my-20">
 	<Article {article} />
 	<HorizontalPageDivider>Siste nyheter fra Bergen Triathlon Events</HorizontalPageDivider>
 	<News {articles} />

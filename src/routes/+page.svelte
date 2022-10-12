@@ -33,7 +33,7 @@
 	{/if}
 
 	<section class="px-8 md:px-0 mt-16 md:mt-24">
-		<Alert type="info" title="Bli med å bidra">
+		<Alert type="info" title="Hjelp oss å komme i mål">
 			Etableringen av det største årlige internasjonale arrangementet i Bergen på TV og nett er
 			krevende. De frivillige er stammen i arbeidet vårt. Det offentlige med Bergen kommune,
 			Vestland fylke og Staten bidrar sammen med våre sponsorer til å gjøre arrangementet mulig
@@ -46,6 +46,15 @@
 			markedsføring eller markering av støtte til barn, voksne og funksjonshemmede. Og ikke minst –
 			et arrangement der de som kanskje er Bergens beste idrettsutøvere gjennom historien kan ta med
 			seg verdenseliten hjem til fest.
+
+			<div>
+				<a
+					href="https://bte.ticketco.events/no/nb"
+					target="_blank"
+					class="btn border-0 bg-sky-300 text-gray-800 focus:outline-0 focus:bg-sky-400 hover:bg-sky-400 mt-8 mx-auto font-bold normal-case text-lg"
+					>Jeg vil gjerne bidra</a
+				>
+			</div>
 		</Alert>
 	</section>
 </main>

@@ -6,7 +6,7 @@
 	class="hero min-h-screen relative"
 	style="background-image: url(https://images.ctfassets.net/wi3d49ltoppx/vAi6L2w3h8kelHusRstzD/5d05daf5cdbdbf7099bec47f6bf49231/_d4h0152_52332189946_o.jpg?fm=webp&w=1200&h=800);"
 >
-	<a href="/" class="absolute top-8 left-8 	flex flex-row items-center">
+	<a href="/" class="absolute top-8 left-8 flex flex-row items-center">
 		<div class="flex flex-col text-right uppercase font-bold text-white">
 			<span>World</span>
 			<span>Triathlon</span>

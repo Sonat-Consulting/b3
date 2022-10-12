@@ -17,7 +17,7 @@
 
 <Header {menuItems} />
 
-<main class="container flex flex-col mx-auto my-20">
+<main class="container flex flex-col mx-auto my-24">
 	{#if topBanner}
 		<TopBanner {topBanner} />
 	{/if}
@@ -32,7 +32,7 @@
 		<News {articles} />
 	{/if}
 
-	<section class="px-8 md:px-0 mt-10 md:mt-20">
+	<section class="px-8 md:px-0 mt-16 md:mt-24">
 		<Alert type="info" title="Bli med å bidra">
 			Etableringen av det største årlige internasjonale arrangementet i Bergen på TV og nett er
 			krevende. De frivillige er stammen i arbeidet vårt. Det offentlige med Bergen kommune,

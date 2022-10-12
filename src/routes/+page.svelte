@@ -32,7 +32,7 @@
 		<News {articles} />
 	{/if}
 
-	<section class="px-8 md:px-0 mt-16 md:mt-20">
+	<section class="px-8 md:px-0 mt-16 md:mt-20 max-w-4xl mx-auto">
 		<Alert type="info" title="Hjelp oss å komme i mål">
 			Etableringen av det største årlige internasjonale arrangementet i Bergen på TV og nett er
 			krevende. De frivillige er stammen i arbeidet vårt. Det offentlige med Bergen kommune,

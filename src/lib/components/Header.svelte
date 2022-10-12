@@ -5,12 +5,12 @@
 	export let menuItems: MenuItem[] = [];
 </script>
 
-<header>
+<header class="bg-gray-100">
 	<div class="max-w-screen-2xl m-auto">
 		<div class="py-4 px-8 flex items-center justify-between">
 			<div class="flex items-center">
 				<a href="/" class="flex flex-row items-center">
-					<div class="flex flex-col text-right uppercase font-bold text-lg">
+					<div class="flex flex-col text-right uppercase font-bold text-base">
 						<span>World</span>
 						<span>Triathlon</span>
 						<span>Cup Bergen</span>
@@ -22,7 +22,7 @@
 				<div class="hidden lg:block">
 					{#each menuItems as menuItem (menuItem.url)}
 						<a
-							class="text-lg mr-12 last:mr-0 font-semibold rounded hover:underline"
+							class="text-base mr-12 last:mr-0 font-semibold rounded hover:underline"
 							target="_blank"
 							href={menuItem.url}>{menuItem.text}</a
 						>

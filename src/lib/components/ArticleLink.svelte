@@ -23,5 +23,5 @@
 	</div>
 
 	<div class="mt-6 mb-4 text-xl font-semibold">{article.title}</div>
-	<div class="leading-relaxed">{article.ingress}</div>
+	<div class="leading-relaxed font-base">{article.ingress}</div>
 </a>

@@ -8,13 +8,7 @@
 	{#each videos as video (video.id)}
 		<div>
 			<div style="padding:56.25% 0 0 0" class="relative">
-				<video
-					src={video.src}
-					poster={video.poster}
-					type={video.type}
-					controls
-					class="absolute top-0 left-0 w-full h-full rounded-lg"
-				>
+				<video controls class="absolute top-0 left-0 w-full h-full rounded-lg">
 					{#each video.sources as source (source.uri)}
 						<source src={source.uri} type={source.type} />
 					{/each}

@@ -1,4 +1,4 @@
-<footer class="footer-1 px-8 py-20 border-t-2 border-gray-200 bg-gray-100">
+<footer class="footer-1 px-8 py-20 bg-gray-100">
 	<div class="max-w-screen-2xl m-auto">
 		<div class="flex mb-16">
 			<div class="w-1/2 md:w-1/4">

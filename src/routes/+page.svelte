@@ -17,7 +17,7 @@
 
 <Header {menuItems} />
 
-<main class="container flex flex-col mx-auto my-24">
+<main class="container flex flex-col mx-auto my-10 md:my-16">
 	{#if topBanner}
 		<TopBanner {topBanner} />
 	{/if}
@@ -32,7 +32,7 @@
 		<News {articles} />
 	{/if}
 
-	<section class="px-8 md:px-0 mt-16 md:mt-24">
+	<section class="px-8 md:px-0 mt-16 md:mt-20">
 		<Alert type="info" title="Hjelp oss å komme i mål">
 			Etableringen av det største årlige internasjonale arrangementet i Bergen på TV og nett er
 			krevende. De frivillige er stammen i arbeidet vårt. Det offentlige med Bergen kommune,
@@ -51,7 +51,7 @@
 				<a
 					href="https://bte.ticketco.events/no/nb"
 					target="_blank"
-					class="btn border-0 bg-sky-300 text-gray-800 focus:outline-0 focus:bg-sky-400 hover:bg-sky-400 mt-8 mx-auto font-bold normal-case text-lg"
+					class="btn border-0 bg-sky-300 text-gray-800 focus:outline-0 focus:bg-sky-400 hover:bg-sky-400 mt-8 mx-auto font-bold normal-case text-base"
 					>Jeg vil gjerne bidra</a
 				>
 			</div>

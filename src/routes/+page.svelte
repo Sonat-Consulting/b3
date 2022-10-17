@@ -16,18 +16,18 @@
 
 <Header {menuItems} />
 
-<main class="container flex flex-col mx-auto my-10 md:my-16">
-	{#if topBanner}
-		<TopBanner {topBanner} />
-	{/if}
+{#if topBanner}
+	<TopBanner {topBanner} />
+{/if}
 
+<main class="container flex flex-col mx-auto mb-10">
 	{#if videos?.length > 0}
-		<PageDivider>Siste videoene fra Bergen Triathlon Events</PageDivider>
+		<PageDivider />
 		<Videos {videos} />
 	{/if}
 
 	{#if articles?.length > 0}
-		<PageDivider>Siste nyheter fra Bergen Triathlon Events</PageDivider>
+		<PageDivider />
 		<News {articles} />
 	{/if}
 </main>

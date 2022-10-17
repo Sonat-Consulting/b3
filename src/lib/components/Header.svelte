@@ -7,7 +7,7 @@
 
 <header>
 	<div class="max-w-screen-2xl m-auto">
-		<div class="py-4 px-8 flex items-center justify-between">
+		<div class="py-2 md:py-4 px-4 flex items-center justify-between">
 			<div class="flex items-center">
 				<a href="/" class="flex flex-row items-center" title="Gå til forsiden">
 					<img
@@ -21,7 +21,7 @@
 				<div class="hidden lg:block">
 					{#each menuItems as menuItem (menuItem.url)}
 						<a
-							class="text-base mr-12 last:mr-0 font-semibold rounded hover:underline"
+							class="text-base mr-12 last:mr-0 font-semibold hover:underline"
 							target="_blank"
 							href={menuItem.url}>{menuItem.text}</a
 						>
@@ -57,7 +57,7 @@
 		<div class="pt-2 pr-5 pb-5 flex flex-col items-end lg:hidden" class:hidden={!isOpen}>
 			{#each menuItems as menuItem (menuItem.url)}
 				<a
-					class="block text-lg mb-5 font-semibold rounded hover:underline"
+					class="block text-lg mb-5 font-semibold hover:underline"
 					target="_blank"
 					href={menuItem.url}>{menuItem.text}</a
 				>

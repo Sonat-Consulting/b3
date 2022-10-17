@@ -9,7 +9,7 @@ export class TopBannerMapper {
 			image: {
 				title: src.topBannerImage.title,
 				description: src.topBannerImage.description,
-				url: `${src.topBannerImage.url}?fm=webp&w=720&h=480`
+				url: `${src.topBannerImage.url}?fm=webp&w=1300&h=900`
 			},
 			primaryLinkText: src.primaryLinkText,
 			primaryLinkUrl: src.primaryLink,

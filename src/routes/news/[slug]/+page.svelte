@@ -2,7 +2,6 @@
 	import type { ArticlePageData } from '$lib/types/pagedata';
 	import News from '$lib/components/News.svelte';
 	import Header from '$lib/components/Header.svelte';
-	import HorizontalPageDivider from '$lib/components/PageDivider.svelte';
 	import Article from '$lib/components/Article.svelte';
 
 	export let data: ArticlePageData;
@@ -24,6 +23,7 @@
 
 <main class="container flex flex-col mx-auto article my-10 md:my-16">
 	<Article {article} />
-	<HorizontalPageDivider />
-	<News {articles} />
+	<section class="md:px-0 my-16">
+		<News {articles} />
+	</section>
 </main>

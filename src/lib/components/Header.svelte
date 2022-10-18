@@ -7,7 +7,7 @@
 
 <header>
 	<div class="max-w-screen-2xl m-auto">
-		<div class="py-2 md:py-4 px-4 flex items-center justify-between">
+		<div class="py-4 px-4 flex items-center justify-between">
 			<div class="flex items-center">
 				<a href="/" class="flex flex-row items-center" title="Gå til forsiden">
 					<img

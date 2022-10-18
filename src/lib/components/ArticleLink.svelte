@@ -18,6 +18,8 @@
 		</div>
 	</div>
 
-	<div class="mt-6 mb-4 text-xl font-semibold">{article.title}</div>
-	<div class="leading-relaxed font-base">{article.ingress}</div>
+	<div class="p-4">
+		<div class="mb-4 text-xl font-semibold">{article.title}</div>
+		<div class="leading-relaxed font-base">{article.ingress}</div>
+	</div>
 </a>

@@ -6,7 +6,7 @@
 	$: video = videos[0];
 </script>
 
-<div class="grid grid-cols-12 grid-rows-6 gap-x-8">
+<div class="grid grid-cols-12 grid-rows-6 gap-x-8 max-w-screen-lg mx-auto">
 	<div
 		class="p-8 row-start-5 row-span-2 lg:row-span-6 col-span-12 lg:col-span-4 flex flex-col justify-center"
 	>

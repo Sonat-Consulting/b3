@@ -4,7 +4,7 @@
 	export let topBanner: TopBanner;
 </script>
 
-<h1 class="text-xl font-bold mb-4">{topBanner.title}</h1>
+<h1 class="text-xl font-bold	" class:mb-4={!!topBanner.subtitle}>{topBanner.title}</h1>
 <p class="font-light text-lg">
 	{topBanner.subtitle}
 </p>

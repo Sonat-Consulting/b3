@@ -23,7 +23,7 @@
 
 <main class="container flex flex-col mx-auto article my-10 md:my-16">
 	<Article {article} />
-	<section class="md:px-0 my-16">
+	<section class="md:px-0 mt-16 lg:mt-32">
 		<News {articles} />
 	</section>
 </main>

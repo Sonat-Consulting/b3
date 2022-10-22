@@ -21,12 +21,14 @@
 
 <main class="container flex flex-col mx-auto mb-10">
 	{#if videos?.length > 0}
-		<section class="md:px-0 my-16">
+		<section class="md:px-0 sm:mt-16 lg:mt-32">
 			<Videos {videos} />
 		</section>
 	{/if}
 
 	{#if articles?.length > 0}
-		<News {articles} />
+		<section class="md:px-0 mt-16 lg:mt-32">
+			<News {articles} />
+		</section>
 	{/if}
 </main>

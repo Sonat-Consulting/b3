@@ -10,7 +10,7 @@
 	style={`background-image: url(${topBanner.image.url})`}
 >
 	<div
-		class="bg-[#467FD4]/80 col-span-12 row-start-4 row-span-3 md:row-span-6 md:col-start-8 md:col-span-5 lg:col-span-4 lg:col-start-9 text-white flex-col justify-center p-8 hidden md:flex"
+		class="bg-[#467FD4]/80 col-span-12 row-start-4 row-span-3 md:row-span-6 md:col-start-7 md:col-span-6 lg:col-span-4 lg:col-start-9 text-white flex-col justify-center p-8 hidden md:flex"
 	>
 		<TopBannerContent {topBanner} />
 	</div>

@@ -11,10 +11,13 @@
 {#if topBanner.primaryLinkUrl || topBanner.secondaryLinkUrl}
 	<div class="card-actions mt-8">
 		{#if topBanner.primaryLinkUrl}
-			<a class="btn btn-primary" href={topBanner.primaryLinkUrl}>{topBanner.primaryLinkText}</a>
+			<a
+				class="btn normal-case bg-white text-black hover:bg-black hover:text-white focus:bg-black focus:text-white"
+				href={topBanner.primaryLinkUrl}>{topBanner.primaryLinkText}</a
+			>
 		{/if}
 		{#if topBanner.secondaryLinkUrl}
-			<a class="btn btn-secondary" href={topBanner.secondaryLinkUrl}
+			<a class="btn normal-case bg-white text-black" href={topBanner.secondaryLinkUrl}
 				>{topBanner.secondaryLinkText}</a
 			>
 		{/if}

@@ -19,7 +19,12 @@
 		class="row-span-4 lg:row-span-6 col-span-12 lg:col-span-8 lg:col-start-5 flex justify-center"
 	>
 		<div style="padding:56.25% 0 0 0" class="relative flex-1 bg-black">
-			<video poster={video.poster} controls class="absolute top-0 left-0 w-full h-full">
+			<video
+				poster={video.poster}
+				controls
+				controlslist="nodownload"
+				class="absolute top-0 left-0 w-full h-full"
+			>
 				{#each video.sources as source (source.uri)}
 					<source src={source.uri} type={source.type} />
 				{/each}

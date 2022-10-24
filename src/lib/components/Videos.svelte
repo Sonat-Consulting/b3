@@ -1,10 +1,19 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import type { Video } from '$lib/types/viewmodels';
 
 	export let videos: Video[] = [];
+
+	let carouselRef: HTMLDivElement;
+
+	onMount(() => {
+		if (window.location.hash) {
+			carouselRef?.querySelector(window.location.hash)?.scrollIntoView();
+		}
+	});
 </script>
 
-<div class="carousel w-full">
+<div bind:this={carouselRef} class="carousel w-full">
 	{#each videos as video, i (video.id)}
 		<div id={video.slug} class="carousel-item relative w-full">
 			<div class="grid grid-cols-12 grid-rows-6 gap-x-2 w-full mx-auto">

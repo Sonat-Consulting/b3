@@ -14,9 +14,11 @@ export class VideoService implements IVideoService {
 
 	async getFrontPageVideos(): Promise<Video[]> {
 		const videoEntries = await this.contentfulVideoService.getVideoEntries();
+
 		const promises = videoEntries?.map(async ({ id, title, description }) => {
 			const { sources, poster } = await this.vimeoVideoService.getVideoMetadata(id);
-			return { id, title, description, poster, sources };
+			const slug = title.toLowerCase().replace(/\s/g, '-');
+			return { id, title, description, poster, sources, slug };
 		});
 
 		try {

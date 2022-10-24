@@ -4,4 +4,5 @@ export type Video = {
 	description: string;
 	poster: string;
 	sources: { uri: string; type: string }[];
+	slug: string;
 };

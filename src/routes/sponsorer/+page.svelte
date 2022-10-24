@@ -28,7 +28,7 @@
 	<h2 class="text-center mb-8 text-xl">Bli sponsor</h2>
 
 	<p class="text-leading mb-8">
-		Sponsorstrukturen vår gi bedrifter muligheten til å bli hovedsponsor, partner, mediepartner
+		Sponsorstrukturen vår gir bedrifter muligheten til å bli hovedsponsor, partner, mediepartner
 		eller leverandør, avhengig av bedriftens muligheter, behov og formål. Våre sponsorer er viktige
 		brikker i gjennomføringen og utviklingen av arrangementene våre. BTE samarbeider tett med sine
 		partnere for i felleskap å utvikle og skape merverdi og forretningsnytte for partnere. Som

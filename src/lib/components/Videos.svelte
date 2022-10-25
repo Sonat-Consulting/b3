@@ -57,6 +57,7 @@
 				>
 					<div style="padding:56.25% 0 0 0" class="relative flex-1 bg-black">
 						<video
+							preload="metadata"
 							poster={video.poster}
 							controls
 							controlslist="nodownload"

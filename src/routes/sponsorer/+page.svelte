@@ -27,7 +27,7 @@
 <section class="px-8 py-16 container max-w-screen-md mx-auto">
 	<h2 class="text-center mb-8 text-xl">Bli sponsor</h2>
 
-	<p class="text-leading mb-8">
+	<p class="text-leading mb-16">
 		Sponsorstrukturen vår gir bedrifter muligheten til å bli hovedsponsor, partner, mediepartner
 		eller leverandør, avhengig av bedriftens muligheter, behov og formål. Våre sponsorer er viktige
 		brikker i gjennomføringen og utviklingen av arrangementene våre. BTE samarbeider tett med sine
@@ -36,11 +36,13 @@
 		aktivisere deg med BTE – internt og eksternt, året rundt!
 	</p>
 
+	<!--
 	<div class="flex justify-center mb-32">
 		<a class="btn btn-primary normal-case" href="https://bte.ticketco.events/no/nb"
 			>Kjøp annonseplassering langs løypen</a
 		>
 	</div>
+	-->
 
 	<h2 class="text-center mb-8 text-xl">Hvorfor bli sponsor?</h2>
 

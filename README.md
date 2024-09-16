@@ -22,8 +22,9 @@ VITE_CONTENTFUL_SPACE_ID={space-id}
 VITE_VIMEO_ACCESS_TOKEN={access token}
 ```
 
-3. Run `npm install`
-4. Run `npm run dev` to run the development server
+
+1. Run `npm install`
+2. Run `npm run dev` to run the development server
 
 ## GraphQL Explorer
 Visit https://graphql.contentful.com/content/v1/spaces/{SPACE}/explore?access_token={CDA_TOKEN} to test queries agains Contentful graph api.

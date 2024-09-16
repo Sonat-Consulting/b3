@@ -17,7 +17,7 @@ VITE_CONTENTFUL_DELIVERY_API_ACCESS_TOKEN=Fetch-Token-From-Contentful-backend
 VITE_CONTENTFUL_SPACE_ID={space-id}
 ```
 
-2. Add secrets for accessing Vimeo API //test
+2. Add secrets for accessing Vimeo API
 ```
 VITE_VIMEO_ACCESS_TOKEN={access token}
 ```
